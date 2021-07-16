@@ -1,0 +1,914 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title "mk.3 Blitter 65xx/6x09 cpu expander"
+Date "2021-05-10"
+Rev "3.01"
+Comp "Dossytronics"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 3350 750  1150 2250
+U 60954061
+F0 "CPUSKT_65xxx" 50
+F1 "CPUSKT_65xxx.sch" 50
+F2 "cpu_D_[7..0]" B R 4500 800 50 
+F3 "cpu_A_[15..0]" B R 4500 900 50 
+F4 "cpu_rdy" I R 4500 1300 50 
+F5 "cpu_6Cbe" I R 4500 1000 50 
+F6 "cpu_~res" I R 4500 1600 50 
+F7 "cpu_phi0" I R 4500 1200 50 
+F8 "cpu_~nmi" I R 4500 1500 50 
+F9 "cpu_~irq" I R 4500 1400 50 
+F10 "cpu_sync6vpa" O R 4500 2600 50 
+F11 "cpu_~so~6mx" O R 4500 1800 50 
+F12 "cpu_6e" O R 4500 2200 50 
+F13 "cpu_C6~ml" O R 4500 2900 50 
+F14 "cpu_R~W" O R 4500 2300 50 
+F15 "cpu_phi16abrt" O R 4500 1900 50 
+F16 "cpu_vss6~vp" O R 4500 2000 50 
+F17 "cpu_phi26vda" O R 4500 2500 50 
+$EndSheet
+$Sheet
+S 950  750  1200 2250
+U 60953FB5
+F0 "CPUSKT_6x09" 50
+F1 "CPUSKT_6x09.sch" 50
+F2 "cpu_D_[7..0]" B R 2150 800 50 
+F3 "cpu_A_[15..0]" B R 2150 900 50 
+F4 "cpu_~halt" I R 2150 1300 50 
+F5 "cpu_tsc" I R 2150 1000 50 
+F6 "cpu_~res" I R 2150 1600 50 
+F7 "cpu_E" I R 2150 1200 50 
+F8 "cpu_~nmi" I R 2150 1500 50 
+F9 "cpu_~irq" I R 2150 1400 50 
+F10 "cpu_~firq" I R 2150 1700 50 
+F11 "cpu_lic" O R 2150 2600 50 
+F12 "cpu_avma" O R 2150 2800 50 
+F13 "cpu_Q" B R 2150 1100 50 
+F14 "cpu_busy" O R 2150 2900 50 
+F15 "cpu_R~W" O R 2150 2300 50 
+F16 "cpu_bs" O R 2150 2400 50 
+F17 "cpu_ba" O R 2150 2700 50 
+$EndSheet
+$Sheet
+S 6000 800  1300 1100
+U 6096CCCC
+F0 "expansion_headers" 50
+F1 "expansion_headers.sch" 50
+F2 "exp_PORTA[7..0]" B R 7300 900 50 
+F3 "exp_PORTB[7..0]" I R 7300 1000 50 
+F4 "exp_PORTC[11..0]" B R 7300 1100 50 
+F5 "exp_PORTD[11..0]" B R 7300 1200 50 
+F6 "exp_PORTE[11..0]" B R 7300 1300 50 
+F7 "exp_PORTF[3..0]" B R 7300 1400 50 
+F8 "exp_PORTG[11..9]" B R 7300 1500 50 
+$EndSheet
+Wire Bus Line
+	8050 900  7300 900 
+Wire Bus Line
+	8050 1000 7300 1000
+Wire Bus Line
+	8050 1100 7300 1100
+Wire Bus Line
+	8050 1200 7300 1200
+Wire Bus Line
+	8050 1300 7300 1300
+Wire Bus Line
+	8050 1400 7300 1400
+Text Label 8050 900  2    50   ~ 0
+PORTA[7..0]
+Text Label 8050 1000 2    50   ~ 0
+PORTB[7..0]
+Text Label 8050 1100 2    50   ~ 0
+PORTC[11..0]
+Text Label 8050 1200 2    50   ~ 0
+PORTD[11..0]
+Text Label 8050 1300 2    50   ~ 0
+PORTE[11..0]
+Text Label 8050 1400 2    50   ~ 0
+PORTF[3..0]
+Wire Bus Line
+	5250 800  4500 800 
+Text Label 5250 800  2    50   ~ 0
+PORTA[7..0]
+Wire Bus Line
+	2900 800  2150 800 
+Text Label 2900 800  2    50   ~ 0
+PORTA[7..0]
+Wire Bus Line
+	2900 900  2150 900 
+Wire Bus Line
+	5250 900  4500 900 
+Text Label 5250 900  2    50   ~ 0
+cpu_A[15..0]
+Text Label 2900 900  2    50   ~ 0
+cpu_A[15..0]
+Wire Wire Line
+	1050 3450 2600 3450
+Text Label 1050 3450 0    50   ~ 0
+cpu_A15
+Wire Wire Line
+	1050 3550 2600 3550
+Text Label 1050 3550 0    50   ~ 0
+cpu_A14
+Wire Wire Line
+	1050 3650 2600 3650
+Text Label 1050 3650 0    50   ~ 0
+cpu_A13
+Wire Wire Line
+	1050 3750 2600 3750
+Text Label 1050 3750 0    50   ~ 0
+cpu_A12
+Wire Wire Line
+	1050 3850 2600 3850
+Text Label 1050 3850 0    50   ~ 0
+cpu_A11
+Wire Wire Line
+	1050 3950 2600 3950
+Text Label 1050 3950 0    50   ~ 0
+cpu_A10
+Wire Wire Line
+	1050 4050 2600 4050
+Text Label 1050 4050 0    50   ~ 0
+cpu_A9
+Wire Wire Line
+	1050 4150 2600 4150
+Text Label 1050 4150 0    50   ~ 0
+cpu_A8
+Wire Wire Line
+	1050 4250 2600 4250
+Text Label 1050 4250 0    50   ~ 0
+cpu_A7
+Wire Wire Line
+	1050 4350 2600 4350
+Text Label 1050 4350 0    50   ~ 0
+cpu_A6
+Wire Wire Line
+	1050 4450 2600 4450
+Text Label 1050 4450 0    50   ~ 0
+cpu_A5
+Wire Wire Line
+	1050 4550 2600 4550
+Text Label 1050 4550 0    50   ~ 0
+cpu_A4
+Wire Wire Line
+	1050 4650 2600 4650
+Text Label 1050 4650 0    50   ~ 0
+cpu_A3
+Wire Wire Line
+	1050 4750 2600 4750
+Text Label 1050 4750 0    50   ~ 0
+cpu_A2
+Wire Wire Line
+	1050 4850 2600 4850
+Text Label 1050 4850 0    50   ~ 0
+cpu_A1
+Wire Wire Line
+	1050 4950 2600 4950
+Text Label 1050 4950 0    50   ~ 0
+cpu_A0
+Text Label 2600 3450 2    50   ~ 0
+PORTE7
+Text Label 2600 3550 2    50   ~ 0
+PORTE6
+Text Label 2600 3650 2    50   ~ 0
+PORTE5
+Text Label 2600 3750 2    50   ~ 0
+PORTE4
+Text Label 2600 3850 2    50   ~ 0
+PORTE3
+Text Label 2600 3950 2    50   ~ 0
+PORTE2
+Text Label 2600 4050 2    50   ~ 0
+PORTE1
+Text Label 2600 4150 2    50   ~ 0
+PORTE0
+Text Label 2600 4250 2    50   ~ 0
+PORTC7
+Text Label 2600 4350 2    50   ~ 0
+PORTC6
+Text Label 2600 4450 2    50   ~ 0
+PORTC5
+Text Label 2600 4550 2    50   ~ 0
+PORTC4
+Text Label 2600 4650 2    50   ~ 0
+PORTC3
+Text Label 2600 4750 2    50   ~ 0
+PORTC2
+Text Label 2600 4850 2    50   ~ 0
+PORTC1
+Text Label 2600 4950 2    50   ~ 0
+PORTC0
+Wire Wire Line
+	5250 1000 4500 1000
+Wire Wire Line
+	5250 1200 4500 1200
+Wire Wire Line
+	5250 1800 4500 1800
+Wire Wire Line
+	5250 2200 4500 2200
+Wire Wire Line
+	5250 2300 4500 2300
+Wire Wire Line
+	5250 2500 4500 2500
+Wire Wire Line
+	5250 2600 4500 2600
+Wire Wire Line
+	5250 2900 4500 2900
+Wire Wire Line
+	2900 1600 2150 1600
+Wire Wire Line
+	2900 1700 2150 1700
+Wire Wire Line
+	2900 1400 2150 1400
+Wire Wire Line
+	2900 1500 2150 1500
+Wire Wire Line
+	2900 1200 2150 1200
+Wire Wire Line
+	2900 1300 2150 1300
+Wire Wire Line
+	2900 1000 2150 1000
+Wire Wire Line
+	2900 1100 2150 1100
+Wire Wire Line
+	6400 3750 5650 3750
+Wire Wire Line
+	6400 3850 5650 3850
+Wire Wire Line
+	6400 3950 5650 3950
+Text Label 5650 3850 0    50   ~ 0
+cpu_~so~6mx
+Text Label 5250 1800 2    50   ~ 0
+cpu_~so~6mx
+Wire Wire Line
+	2900 2300 2150 2300
+Wire Wire Line
+	2900 2400 2150 2400
+Wire Wire Line
+	2900 2700 2150 2700
+Wire Wire Line
+	2900 2600 2150 2600
+Text Label 2900 1000 2    50   ~ 0
+PORTB0
+Text Label 2900 1100 2    50   ~ 0
+PORTB1
+Text Label 2900 1200 2    50   ~ 0
+PORTB2
+Text Label 2900 1300 2    50   ~ 0
+PORTB3
+Text Label 2900 1400 2    50   ~ 0
+PORTB4
+Text Label 2900 1500 2    50   ~ 0
+PORTB5
+Text Label 2900 1600 2    50   ~ 0
+PORTB6
+Text Label 2900 1700 2    50   ~ 0
+PORTB7
+Text Label 5250 1000 2    50   ~ 0
+PORTB0
+Text Label 5250 1200 2    50   ~ 0
+PORTB2
+Wire Wire Line
+	5250 1600 4500 1600
+Wire Wire Line
+	5250 1400 4500 1400
+Wire Wire Line
+	5250 1500 4500 1500
+Wire Wire Line
+	5250 1300 4500 1300
+Text Label 5250 1300 2    50   ~ 0
+PORTB3
+Text Label 5250 1400 2    50   ~ 0
+PORTB4
+Text Label 5250 1500 2    50   ~ 0
+PORTB5
+Text Label 5250 1600 2    50   ~ 0
+PORTB6
+Text Label 5650 3750 0    50   ~ 0
+PORTB1
+Text Label 5650 3950 0    50   ~ 0
+PORTD6
+$Comp
+L Connector_Generic:Conn_01x03 LK1
+U 1 1 609AE230
+P 6600 3850
+F 0 "LK1" H 6680 3892 50  0000 L CNN
+F 1 "Conn_01x03" H 6680 3801 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6600 3850 50  0001 C CNN
+F 3 "~" H 6600 3850 50  0001 C CNN
+	1    6600 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4150 5650 4150
+Wire Wire Line
+	6400 4250 5650 4250
+Wire Wire Line
+	6400 4350 5650 4350
+Text Label 5650 4350 0    50   ~ 0
+PORTB1
+Text Label 5650 4150 0    50   ~ 0
+PORTD6
+$Comp
+L Connector_Generic:Conn_01x03 LK2
+U 1 1 609B41F0
+P 6600 4250
+F 0 "LK2" H 6680 4292 50  0000 L CNN
+F 1 "Conn_01x03" H 6680 4201 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6600 4250 50  0001 C CNN
+F 3 "~" H 6600 4250 50  0001 C CNN
+	1    6600 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1900 5250 1900
+Text Label 5250 1900 2    50   ~ 0
+cpu_phi16abrt
+Text Label 5650 4250 0    50   ~ 0
+cpu_phi16abrt
+Wire Wire Line
+	5250 2000 4500 2000
+Text Label 5250 2000 2    50   ~ 0
+cpu_css6~vp
+Text Label 5650 4650 0    50   ~ 0
+cpu_css6~vp
+Wire Wire Line
+	6400 4550 5650 4550
+Wire Wire Line
+	6400 4650 5650 4650
+Wire Wire Line
+	6400 4750 5650 4750
+$Comp
+L Connector_Generic:Conn_01x03 LK3
+U 1 1 609BE458
+P 6600 4650
+F 0 "LK3" H 6680 4692 50  0000 L CNN
+F 1 "Conn_01x03" H 6680 4601 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6600 4650 50  0001 C CNN
+F 3 "~" H 6600 4650 50  0001 C CNN
+	1    6600 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 609C286E
+P 5650 4550
+F 0 "#PWR0113" H 5650 4300 50  0001 C CNN
+F 1 "GND" V 5655 4422 50  0000 R CNN
+F 2 "" H 5650 4550 50  0001 C CNN
+F 3 "" H 5650 4550 50  0001 C CNN
+	1    5650 4550
+	0    1    1    0   
+$EndComp
+Text Label 5650 4750 0    50   ~ 0
+PORTD5
+Wire Wire Line
+	2900 2900 2150 2900
+Wire Wire Line
+	2900 2800 2150 2800
+Text Label 5250 2200 2    50   ~ 0
+PORTD0
+Text Label 5250 2300 2    50   ~ 0
+PORTD1
+Text Label 2900 2300 2    50   ~ 0
+PORTD1
+Text Label 2900 2400 2    50   ~ 0
+PORTD2
+Text Label 5250 2500 2    50   ~ 0
+PORTD3
+Text Label 5250 2600 2    50   ~ 0
+PORTD4
+Text Label 2900 2600 2    50   ~ 0
+PORTD4
+Text Label 2900 2700 2    50   ~ 0
+PORTD5
+Text Label 2900 2800 2    50   ~ 0
+PORTD6
+Text Label 2900 2900 2    50   ~ 0
+PORTD7
+Text Label 5250 2900 2    50   ~ 0
+PORTD7
+$Comp
+L Connector_Generic:Conn_01x03 LK4
+U 1 1 609CDB8B
+P 10150 1000
+F 0 "LK4" H 10230 1042 50  0000 L CNN
+F 1 "Conn_01x03" H 10230 951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 10150 1000 50  0001 C CNN
+F 3 "~" H 10150 1000 50  0001 C CNN
+	1    10150 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 1000 9150 1000
+$Comp
+L vcc_cpu:VCC_CPU #PWR0102
+U 1 1 609D3F54
+P 9150 1000
+F 0 "#PWR0102" H 9150 850 50  0001 C CNN
+F 1 "VCC_CPU" V 9168 1127 50  0000 L CNN
+F 2 "" H 9150 1000 50  0000 C CNN
+F 3 "" H 9150 1000 50  0000 C CNN
+	1    9150 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 609D404C
+P 9150 900
+F 0 "#PWR0105" H 9150 750 50  0001 C CNN
+F 1 "+5V" V 9165 1028 50  0000 L CNN
+F 2 "" H 9150 900 50  0001 C CNN
+F 3 "" H 9150 900 50  0001 C CNN
+	1    9150 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0114
+U 1 1 609D4235
+P 9150 1100
+F 0 "#PWR0114" H 9150 950 50  0001 C CNN
+F 1 "+3V3" V 9165 1228 50  0000 L CNN
+F 2 "" H 9150 1100 50  0001 C CNN
+F 3 "" H 9150 1100 50  0001 C CNN
+	1    9150 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L vcc_cpu:VCC_CPU #PWR0115
+U 1 1 609D4468
+P 9100 1550
+F 0 "#PWR0115" H 9100 1400 50  0001 C CNN
+F 1 "VCC_CPU" H 9117 1723 50  0000 C CNN
+F 2 "" H 9100 1550 50  0000 C CNN
+F 3 "" H 9100 1550 50  0000 C CNN
+	1    9100 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 609D49D4
+P 9600 1800
+F 0 "C2" H 9715 1846 50  0000 L CNN
+F 1 "100n" H 9715 1755 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 9638 1650 50  0001 C CNN
+F 3 "~" H 9600 1800 50  0001 C CNN
+	1    9600 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 609D4CE8
+P 9100 1800
+F 0 "C1" H 9218 1846 50  0000 L CNN
+F 1 "10u" H 9218 1755 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 9138 1650 50  0001 C CNN
+F 3 "~" H 9100 1800 50  0001 C CNN
+	1    9100 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 609D5B32
+P 9100 2050
+F 0 "#PWR0116" H 9100 1800 50  0001 C CNN
+F 1 "GND" H 9105 1877 50  0000 C CNN
+F 2 "" H 9100 2050 50  0001 C CNN
+F 3 "" H 9100 2050 50  0001 C CNN
+	1    9100 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 1550 9100 1600
+Wire Wire Line
+	9100 1600 9600 1600
+Wire Wire Line
+	10050 1600 10050 1650
+Connection ~ 9100 1600
+Wire Wire Line
+	9100 1600 9100 1650
+Wire Wire Line
+	9600 1650 9600 1600
+Connection ~ 9600 1600
+Wire Wire Line
+	9600 1600 10050 1600
+Wire Wire Line
+	9100 2050 9100 2000
+Wire Wire Line
+	10050 1950 10050 2000
+Wire Wire Line
+	10050 2000 9600 2000
+Connection ~ 9100 2000
+Wire Wire Line
+	9100 2000 9100 1950
+Wire Wire Line
+	9600 2000 9600 1950
+Connection ~ 9600 2000
+Wire Wire Line
+	9600 2000 9100 2000
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 609E1D91
+P 10050 1600
+F 0 "#FLG0101" H 10050 1675 50  0001 C CNN
+F 1 "PWR_FLAG" H 10050 1773 50  0000 C CNN
+F 2 "" H 10050 1600 50  0001 C CNN
+F 3 "~" H 10050 1600 50  0001 C CNN
+	1    10050 1600
+	1    0    0    -1  
+$EndComp
+Connection ~ 10050 1600
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 609E1ED0
+P 10050 2000
+F 0 "#FLG0102" H 10050 2075 50  0001 C CNN
+F 1 "PWR_FLAG" H 10050 2173 50  0000 C CNN
+F 2 "" H 10050 2000 50  0001 C CNN
+F 3 "~" H 10050 2000 50  0001 C CNN
+	1    10050 2000
+	-1   0    0    1   
+$EndComp
+Connection ~ 10050 2000
+Wire Wire Line
+	9150 1100 9700 1100
+Wire Wire Line
+	9150 900  9950 900 
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 60A260C1
+P 9700 1100
+F 0 "#FLG0103" H 9700 1175 50  0001 C CNN
+F 1 "PWR_FLAG" H 9700 1273 50  0000 C CNN
+F 2 "" H 9700 1100 50  0001 C CNN
+F 3 "~" H 9700 1100 50  0001 C CNN
+	1    9700 1100
+	-1   0    0    1   
+$EndComp
+Connection ~ 9700 1100
+Wire Wire Line
+	9700 1100 9950 1100
+Wire Wire Line
+	7750 3600 8400 3600
+Wire Wire Line
+	8400 3700 7750 3700
+Wire Wire Line
+	8400 3800 7750 3800
+Wire Wire Line
+	8400 3900 7750 3900
+Wire Wire Line
+	8900 3600 9050 3600
+Wire Wire Line
+	9050 3600 9050 3700
+Wire Wire Line
+	8900 3900 9050 3900
+Connection ~ 9050 3900
+Wire Wire Line
+	9050 3900 9050 4200
+Wire Wire Line
+	8900 3800 9050 3800
+Connection ~ 9050 3800
+Wire Wire Line
+	9050 3800 9050 3900
+Wire Wire Line
+	8900 3700 9050 3700
+Connection ~ 9050 3700
+Wire Wire Line
+	9050 3700 9050 3800
+$Comp
+L power:GND #PWR0118
+U 1 1 60A3D7C0
+P 9050 4200
+F 0 "#PWR0118" H 9050 3950 50  0001 C CNN
+F 1 "GND" H 9055 4027 50  0000 C CNN
+F 2 "" H 9050 4200 50  0001 C CNN
+F 3 "" H 9050 4200 50  0001 C CNN
+	1    9050 4200
+	1    0    0    -1  
+$EndComp
+Text Label 7750 3600 0    50   ~ 0
+PORTF0
+Text Label 7750 3700 0    50   ~ 0
+PORTF1
+Text Label 7750 3800 0    50   ~ 0
+PORTF2
+Text Label 7750 3900 0    50   ~ 0
+PORTF3
+Wire Wire Line
+	7750 4750 8400 4750
+Wire Wire Line
+	8400 4850 7750 4850
+Wire Wire Line
+	8400 4950 7750 4950
+Wire Wire Line
+	8400 5050 7750 5050
+Text Label 7750 4750 0    50   ~ 0
+PORTF0
+Text Label 7750 4850 0    50   ~ 0
+PORTF1
+Text Label 7750 4950 0    50   ~ 0
+PORTF2
+Text Label 7750 5050 0    50   ~ 0
+PORTF3
+$Comp
+L Device:R R1
+U 1 1 60A4087D
+P 8550 4750
+F 0 "R1" V 8500 4550 50  0000 C CNN
+F 1 "4k7" V 8550 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8480 4750 50  0001 C CNN
+F 3 "~" H 8550 4750 50  0001 C CNN
+	1    8550 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60A40B4E
+P 8550 4850
+F 0 "R2" V 8500 4650 50  0000 C CNN
+F 1 "4k7" V 8550 4850 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8480 4850 50  0001 C CNN
+F 3 "~" H 8550 4850 50  0001 C CNN
+	1    8550 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60A40C4F
+P 8550 4950
+F 0 "R3" V 8500 4750 50  0000 C CNN
+F 1 "4k7" V 8550 4950 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8480 4950 50  0001 C CNN
+F 3 "~" H 8550 4950 50  0001 C CNN
+	1    8550 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60A40D6B
+P 8550 5050
+F 0 "R4" V 8500 4850 50  0000 C CNN
+F 1 "4k7" V 8550 5050 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8480 5050 50  0001 C CNN
+F 3 "~" H 8550 5050 50  0001 C CNN
+	1    8550 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0119
+U 1 1 60A40EE7
+P 8900 4700
+F 0 "#PWR0119" H 8900 4550 50  0001 C CNN
+F 1 "+3V3" V 8915 4828 50  0000 L CNN
+F 2 "" H 8900 4700 50  0001 C CNN
+F 3 "" H 8900 4700 50  0001 C CNN
+	1    8900 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 4700 8900 4750
+Wire Wire Line
+	8900 5050 8700 5050
+Wire Wire Line
+	8700 4950 8900 4950
+Connection ~ 8900 4950
+Wire Wire Line
+	8900 4950 8900 5050
+Wire Wire Line
+	8700 4850 8900 4850
+Connection ~ 8900 4850
+Wire Wire Line
+	8900 4850 8900 4950
+Wire Wire Line
+	8700 4750 8900 4750
+Connection ~ 8900 4750
+Wire Wire Line
+	8900 4750 8900 4850
+Wire Wire Line
+	9550 3650 10200 3650
+Wire Wire Line
+	10200 3750 9550 3750
+Wire Wire Line
+	10200 3850 9550 3850
+Wire Wire Line
+	10700 3650 10850 3650
+Wire Wire Line
+	10850 3650 10850 3750
+Wire Wire Line
+	10700 3850 10850 3850
+Connection ~ 10850 3850
+Wire Wire Line
+	10700 3750 10850 3750
+Connection ~ 10850 3750
+Wire Wire Line
+	10850 3750 10850 3850
+$Comp
+L power:GND #PWR0120
+U 1 1 60A4DD37
+P 10850 4250
+F 0 "#PWR0120" H 10850 4000 50  0001 C CNN
+F 1 "GND" H 10855 4077 50  0000 C CNN
+F 2 "" H 10850 4250 50  0001 C CNN
+F 3 "" H 10850 4250 50  0001 C CNN
+	1    10850 4250
+	1    0    0    -1  
+$EndComp
+Text Label 9550 3650 0    50   ~ 0
+PORTG9
+Text Label 9550 3750 0    50   ~ 0
+PORTG10
+Text Label 9550 3850 0    50   ~ 0
+PORTG11
+Wire Wire Line
+	9550 4800 10200 4800
+Wire Wire Line
+	10200 4900 9550 4900
+Wire Wire Line
+	10200 5000 9550 5000
+Text Label 9550 4800 0    50   ~ 0
+PORTG9
+Text Label 9550 4900 0    50   ~ 0
+PORTG10
+Text Label 9550 5000 0    50   ~ 0
+PORTG11
+$Comp
+L Device:R R5
+U 1 1 60A4DD49
+P 10350 4800
+F 0 "R5" V 10300 4600 50  0000 C CNN
+F 1 "4k7" V 10350 4800 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 10280 4800 50  0001 C CNN
+F 3 "~" H 10350 4800 50  0001 C CNN
+	1    10350 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 60A4DD4F
+P 10350 4900
+F 0 "R6" V 10300 4700 50  0000 C CNN
+F 1 "4k7" V 10350 4900 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 10280 4900 50  0001 C CNN
+F 3 "~" H 10350 4900 50  0001 C CNN
+	1    10350 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 60A4DD55
+P 10350 5000
+F 0 "R7" V 10300 4800 50  0000 C CNN
+F 1 "4k7" V 10350 5000 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 10280 5000 50  0001 C CNN
+F 3 "~" H 10350 5000 50  0001 C CNN
+	1    10350 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0121
+U 1 1 60A4DD61
+P 10700 4750
+F 0 "#PWR0121" H 10700 4600 50  0001 C CNN
+F 1 "+3V3" V 10715 4878 50  0000 L CNN
+F 2 "" H 10700 4750 50  0001 C CNN
+F 3 "" H 10700 4750 50  0001 C CNN
+	1    10700 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10700 4750 10700 4800
+Wire Wire Line
+	10500 5000 10700 5000
+Wire Wire Line
+	10500 4900 10700 4900
+Connection ~ 10700 4900
+Wire Wire Line
+	10700 4900 10700 5000
+Wire Wire Line
+	10500 4800 10700 4800
+Connection ~ 10700 4800
+Wire Wire Line
+	10700 4800 10700 4900
+Wire Wire Line
+	10850 3850 10850 4250
+Wire Bus Line
+	8050 1500 7300 1500
+Text Label 8050 1500 2    50   ~ 0
+PORTG[11..9]
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even LK5
+U 1 1 60A972C6
+P 8600 3700
+F 0 "LK5" H 8650 4017 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 8650 3926 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 8600 3700 50  0001 C CNN
+F 3 "~" H 8600 3700 50  0001 C CNN
+	1    8600 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even LK6
+U 1 1 60A9773B
+P 10400 3750
+F 0 "LK6" H 10450 4067 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 10450 3976 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 10400 3750 50  0001 C CNN
+F 3 "~" H 10400 3750 50  0001 C CNN
+	1    10400 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x17 P7
+U 1 1 60975153
+P 4550 6050
+F 0 "P7" H 4630 6092 50  0000 L CNN
+F 1 "Conn_01x17" H 4630 6001 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x17_P2.54mm_Vertical" H 4550 6050 50  0001 C CNN
+F 3 "~" H 4550 6050 50  0001 C CNN
+	1    4550 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 609755E8
+P 4350 6850
+F 0 "#PWR0122" H 4350 6600 50  0001 C CNN
+F 1 "GND" H 4355 6677 50  0000 C CNN
+F 2 "" H 4350 6850 50  0001 C CNN
+F 3 "" H 4350 6850 50  0001 C CNN
+	1    4350 6850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 6750 3400 6750
+Wire Wire Line
+	4350 6650 3400 6650
+Wire Wire Line
+	4350 6550 3400 6550
+Wire Wire Line
+	4350 6450 3400 6450
+Wire Wire Line
+	4350 6350 3400 6350
+Wire Wire Line
+	4350 6250 3400 6250
+Wire Wire Line
+	4350 6150 3400 6150
+Wire Wire Line
+	4350 6050 3400 6050
+Wire Wire Line
+	4350 5950 3400 5950
+Wire Wire Line
+	4350 5850 3400 5850
+Wire Wire Line
+	4350 5750 3400 5750
+Wire Wire Line
+	4350 5650 3400 5650
+Wire Wire Line
+	4350 5550 3400 5550
+Wire Wire Line
+	4350 5450 3400 5450
+Wire Wire Line
+	4350 5350 3400 5350
+Wire Wire Line
+	4350 5250 3400 5250
+Text Label 3400 6750 0    50   ~ 0
+PORTE7
+Text Label 3400 6650 0    50   ~ 0
+PORTA7
+Text Label 3400 6550 0    50   ~ 0
+PORTA6
+Text Label 3400 6450 0    50   ~ 0
+PORTA5
+Text Label 3400 6350 0    50   ~ 0
+PORTA4
+Text Label 3400 6250 0    50   ~ 0
+PORTA3
+Text Label 3400 6150 0    50   ~ 0
+PORTA2
+Text Label 3400 6050 0    50   ~ 0
+PORTA1
+Text Label 3400 5950 0    50   ~ 0
+PORTA0
+Text Label 3400 5850 0    50   ~ 0
+PORTD1
+Text Label 3400 5750 0    50   ~ 0
+PORTB1
+Text Label 3400 5650 0    50   ~ 0
+PORTD4
+Text Label 3400 5550 0    50   ~ 0
+PORTB2
+Text Label 3400 5450 0    50   ~ 0
+PORTB6
+Text Label 3400 5350 0    50   ~ 0
+PORTD3
+Text Label 3400 5250 0    50   ~ 0
+PORTB3
+$EndSCHEMATC

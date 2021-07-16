@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name mk3blit)(type KiCad)(uri ${KIPRJMOD}/mod)(options "")(descr ""))
+  (lib (name digikey-footprints)(type KiCad)(uri E:/Users/dominic/kicad/digikey-kicad-library-master/digikey-footprints.pretty)(options "")(descr ""))
+  (lib (name microcrystalag)(type KiCad)(uri ${KIPRJMOD}/mod/microcrystalag.pretty)(options "")(descr ""))
+)

@@ -1,0 +1,264 @@
+
+PORTS:
+
+#pins
+
+10	PORTA = 8 bit ACT/HCT io
+8	PORTB = 8 bit ACT/HCT o buffer
+12	PORTC = 12 bit 74CB3T
+12	PORTD = 12 bit 74CB3T
+15	PORTE/D/E = 12 bit 74CB3T shared pins on fpga only one enabled at a time
+57
+
+m
+brdcon	lvl	dir	Mk3 pin		Mk2 pin	(*indicates changes)		65(c)02		65816		6x-09		68008_48	z80		68008_52	680x0_64	680x0_68QFP	8088			8086
+																									MIN	MAX		MIN	MAX
+	
+
+	### CMOS LEVEL IO ###
+
+J52	cmos	io	PORTA[0]	CPUSKT_D_io[0]				D[0]	33	D[0]	33	D[0]	31	D[0]	27	D[0]	14	D[0]	30	D[0]	5	D[0]	5	AD[0]		16	AD[0]		16
+J52	cmos	io	PORTA[1]	CPUSKT_D_io[1]				D[1]	32	D[1]	32	D[1]	30	D[1]	26	D[1]	15	D[1]	29	D[1]	4	D[1]	4	AD[1]		15	AD[1]		15
+J52	cmos	io	PORTA[2]	CPUSKT_D_io[2]				D[2]	31	D[2]	31	D[2]	29	D[2]	25	D[2]	12	D[2]	28	D[2]	3	D[2]	3	AD[2]		14	AD[2]		14
+J52	cmos	io	PORTA[3]	CPUSKT_D_io[3]				D[3]	30	D[3]	30	D[3]	28	D[3]	24	D[3]	8	D[3]	27	D[3]	2	D[3]	2	AD[3]		13	AD[3]		13
+J52	cmos	io	PORTA[4]	CPUSKT_D_io[4]				D[4]	29	D[4]	29	D[4]	27	D[4]	23	D[4]	7	D[4]	26	D[4]	1	D[4]	1	AD[4]		12	AD[4]		12
+J52	cmos	io	PORTA[5]	CPUSKT_D_io[5]				D[5]	28	D[5]	28	D[5]	26	D[5]	22	D[5]	9	D[5]	25	D[5]	64	D[5]	68	AD[5]		11	AD[5]		11
+J52	cmos	io	PORTA[6]	CPUSKT_D_io[6]				D[6]	27	D[6]	27	D[6]	25	D[6]	21	D[6]	10	D[6]	24	D[6]	63	D[6]	67	AD[6]		10	AD[6]		10
+J52	cmos	io	PORTA[7]	CPUSKT_D_io[7]				D[7]	26	D[7]	26	D[7]	24	D[7]	20	D[7]	13	D[7]	23	D[7]	62	D[7]	66	AD[7]		9	AD[7]		9
+	
+
+	### CMOS LEVEL OUT ###
+
+J52	cmos	o	PORTB[0]	CPUSKT_6BE9TSCKnVPA_o			BE	36	BE	6	TSC	39	nVPA	39			nVPA	43	nVPA	21	nVPA	23	MNnMX		33	MNnMX		33
+J52	cmos	o	PORTB[1]	CPUSKT_9Q_o			*	[nSO]1	38	[ABRT]2 3	Q	35	?BERR?	40			?BERR?	44	?nBERR? 22	?nBERR?	24	
+J52	cmos	o	PORTB[2]	CPUSKT_PHI09EKZCLK_o			phi0	37	phi0	37	E	34	CLK	34			CLK	38	CLK	15	CLK	15	CLK		19	CLK		19
+J52	cmos	o	PORTB[3]	CPUSKT_RDY9KnHALTZnWAIT_o		RDY	2	RDY	2	HALT	40	HALT	36	nWAIT	24	nHALT	40	nHALT	17	nHALT	19	READY		22	READY		22
+J52	cmos	o	PORTB[4]	CPUSKT_nIRQKnIPL1_o			nIRQ	4	nIRQ	4	nIRQ	3	IPL1	41	nIRQ	16	IPL1	45	IPL1	24	IPL1	26	INTR		18	INTR		18
+J52	cmos	o	PORTB[5]	CPUSKT_nNMIKnIPL02_o			nNMI	6	nNMI	6	nNMI	2	IPL0/2	42	nNMI	17	IPL0	47	IPL0	25	IPL0	27	NMI		17	NMI		17
+J52	cmos	o	PORTB[6]	CPUSKT_nRES_o				nRES	40	nRES	40	nRES	37	nRES	37	nRES	26	nRES	41	nRES	18	nRES	20	RESET		21	RESET		21
+			PORTB[7]	CPUSKT_9nFIRQLnDTACK_o							nFIRQ	4	nDTACK	31			nDTACK	34	nDTACK	10	nDTACK	10
+
+	### TTL I/O ###
+
+J51		i	PORTC[0]	CPUSKT_A_i[0]				A[0]	9	A[0]	9	A[0]	8	A[0]	46	A[0]	30	A[0]	51	?nLDS?	8	?nLDS?	8	nSSO	-hi-	34	BHE/S7		34
+J51		i	PORTC[1]	CPUSKT_A_i[1]				A[1]	10	A[1]	10	A[1]	9	A[1]	47	A[1]	31	A[1]	51	A[1]	29	A[1]	32	
+J51		i	PORTC[2]	CPUSKT_A_i[2]				A[2]	11	A[2]	11	A[2]	10	A[2]	48	A[2]	32	A[2]	1	A[2]	30	A[2]	33
+J51		i	PORTC[3]	CPUSKT_A_i[3]				A[3]	12	A[3]	12	A[3]	11	A[3]	1	A[3]	33	A[3]	2	A[3]	31	A[3]	34
+J51		i	PORTC[4]	CPUSKT_A_i[4]				A[4]	13	A[4]	13	A[4]	12	A[4]	2	A[4]	34	A[4]	3	A[4]	32	A[4]	35
+J51		i	PORTC[5]	CPUSKT_A_i[5]				A[5]	14	A[5]	14	A[5]	13	A[5]	3	A[5]	35	A[5]	4	A[5]	33	A[5]	36
+J51		i	PORTC[6]	CPUSKT_A_i[6]				A[6]	15	A[6]	15	A[6]	14	A[6]	4	A[6]	36	A[6]	5	A[6]	34	A[6]	37
+J51		i	PORTC[7]	CPUSKT_A_i[7]				A[7]	16	A[7]	16	A[7]	15	A[7]	5	A[7]	37	A[7]	6	A[7]	35	A[7]	38
+J51		i	PORTC[8]	CPUSKT_A_i[16]										A[16]	16			A[16]	18	A[16]	44	A[16]	47	A[16]S3		38	A[16]S3		38
+J51		i	PORTC[9]	CPUSKT_A_i[17]										A[17]	17			A[17]	19	A[17]	45	A[17]	48	A[17]S4		37	A[17]S4		37
+J51		i	PORTC[10]	CPUSKT_A_i[18]										A[18]	18			A[18]	20	A[18]	46	A[18]	49	A[18]S5		36	A[18]S5		36
+J51		i	PORTC[11]	CPUSKT_A_i[19]										A[19]	19			A[19]	21	A[19]	47	A[19]	50	A[19]S6		35	A[19]S6		35
+	
+J51		i	PORTD[0]	CPUSKT_6EKEZnRD_i			-	35	E	35			?E?	38	nRD	21	?E?	42	?E?	20	?E?	22	nRD		32	nRD		32
+J51		i	PORTD[1]	CPUSKT_RnWZnWR_i			RnW	34	RnW	34	RnW	32	RnW	30	nWR	22	RnW	33	RnW	9	RnW	9	nWR	nLOCK	29	nWR	nLOCK	29
+J51		i 	PORTD[2]	CPUSKT_PHI16ABRT9BSKnDS_i	*					BS	5	nDS	29	?nHALT?	18	nDS	32	?nUDS?	7	?nUDS?	7	nDEN	nS2	26	nDEN	nS2	26
+J51		i	PORTD[3]	CPUSKT_PHI26VDAKFC0ZnMREQ_i		phi2	39	VDA	39			FC0	45	nMREQ	19	FC0	50	FC0	28	FC0	30	nINTA	QS1	24	nINTA	QS1	24
+J51		i	PORTD[4]	CPUSKT_SYNC6VPA9LICKFC2ZnM1_i		SYNC	7	VPA	7	LIC	38	FC2	43	M1	27	FC2	48	FC2	26	FC2	28	DTnR	nS1	27	DTnR	nS1	27
+J51		i	PORTD[5]	CPUSKT_VSS6VPA9BAKnAS_i			[vss]3	1	[VPB]3	1	BA	6	nAS	28	?nRFSH?	28	nAS	31	nAS	6	nAS	6	ALE	QS0	25	ALE	QS0	25
+J51		i	PORTD[6]	CPUSKT_nSO6MX9AVMAKFC1ZnIOREQ_i	*	phi1	3	[M/X]1	38	AVMA	36	FC1	44	nIOREQ	20	FC1	49	FC1	27	FC1	29	IOnM	nS0	28	MnIO	nS0	28
+J51		io	PORTD[7]	CPUSKT_C6nML9BUSYKnBGZnBUSACK_i 	MLB	5	MLB	5	BUSY	33	nBG	32	nBUSACK	23	nBG	35	nBG	11	nBG	11	HLDA	RQGT0	30	HLDA	RQGT0	
+J51		io	PORTD[8]	CPUSKT_KnBRZnBUSREQ_o									nBR	33	nBUSREQ	25	nBR	37	nBR	13	nBR	13	HOLD	RQGT1	31	HOLD	RQGT1	31
+J51		o	PORTD[9]										
+J51		o	PORTD[10]																?IPL2?	46	?IPL2?	23	?IPL2?	25	?nTEST?		23	?nTEST?		23
+J51		i	PORTD[11]																?nBGACK?36	?nBGACK?12	?nBGACK?12
+																						?nVMA?	19	?nVMA?	21
+
+1 nSO/MX is selected via jumper
+2 ABORT/PHI1 is selected via jumper
+3 jumper to allow pull pin 3 direct to gnd
+
+	### MULTIPLEXED I/O ### only one of these ports is active at once
+
+J51		i	PORTE[0]	CPUSKT_A_i[8]				A[8]	17	A[8]	17	A[8]	16	A[8]	6	A[8]	38	A[8]	7	A[8]	36	A[8]	39	
+J51		i	PORTE[1]	CPUSKT_A_i[9]				A[9]	18	A[9]	18	A[9]	17	A[9]	7	A[9]	39	A[9]	8	A[9]	37	A[9]	40	
+J53		i	PORTE[2]	CPUSKT_A_i[10]				A[10]	19	A[10]	19	A[10]	18	A[10]	8	A[10]	40	A[10]	9	A[10]	38	A[10]	41	
+J53		i	PORTE[3]	CPUSKT_A_i[11]				A[11]	20	A[11]	20	A[11]	19	A[11]	9	A[11]	1	A[11]	10	A[11]	39	A[11]	42	
+J53		i	PORTE[4]	CPUSKT_A_i[12]				A[12]	22	A[12]	22	A[12]	20	A[12]	10	A[12]	2	A[12]	11	A[12]	40	A[12]	43	
+J53		i	PORTE[5]	CPUSKT_A_i[13]				A[13]	23	A[13]	23	A[13]	21	A[13]	11	A[13]	3	A[13]	12	A[13]	41	A[13]	55	
+J53		i	PORTE[6]	CPUSKT_A_i[14]				A[14]	24	A[14]	24	A[14]	22	A[14]	12	A[14]	4	A[14]	14	A[14]	42	A[14]	45	
+J53		i	PORTE[7]	CPUSKT_A_i[15]				A[15]	25	A[15]	25	A[15]	23	A[15]	14	A[15]	5	A[15]	16	A[15]	43	A[15]	46	
+J54		i	PORTE[8]																A[20]	22	A[20]	48	A[20]	51
+J54		i	PORTE[9]																A[21]	13	A[21]	50	A[21]	53
+J54		i	PORTE[10]																		A[22]	51	A[22]	54
+J54		i	PORTE[11]																		A[23]	52	A[23]	55
+
+
+J54		io	PORTF[0]																		D[8]	61	D[8]	65	A[8]		8	AD[8]		8
+J54		io	PORTF[1]																		D[9]	60	D[9]	64	A[9]		7	AD[9]		7
+J54		io	PORTF[2]																		D[10]	59	D[10]	63	A[10]		6	AD[10]		6
+J54		io	PORTF[3]																		D[11]	58	D[11]	62	A[11]		5	AD[11]		5
+J54		io	PORTF[8]																		D[12]	57	D[12]	61	A[12]		4	AD[12]		4
+J54		io	PORTF[9]																		D[13]	56	D[13]	60	A[13]		3	AD[13]		3
+J54		io	PORTF[10]																		D[14]	55	D[14]	59	A[14]		2	AD[14]		2
+J54		io	PORTF[11]																		D[15]	54	D[15]	58	A[15]		39	AD[15]		
+
+
+	
+
+
+# boot time configuration
+
+t65		PORTG[3]						
+swromx		PORTG[4]			
+mosram		PORTG[5]			
+memi		PORTG[6]
+-free-		PORTG[7]
+-free-		PORTG[8]
+
+sys_type[0]	PORTG[0]
+sys_type[1]	PORTG[1]
+sys_type[2]	PORTG[2]
+
+# cpu board configuration
+
+cpu_type[0]	PORTF[4]
+cpu_type[1]	PORTF[5]
+cpu_type[2]	PORTF[6]
+cpu_type[3]	PORTF[7]
+
+cpu_speed[0]	PORTG[9]
+cpu_speed[1]	PORTG[10]
+cpu_speed[2]	PORTG[11]
+
+
+	- own pin -
+	- own pin -
+	- own pin -
+
+
+#cpu config
+			cpu_type	speed
+			3 2 1 0 	2 1 0
+6502A		2MHz	- - - -		- - -
+
+W65c02		2Mhz	- - - x		- - -
+W65c02		4Mhz	- - - x		- - x
+W65c02		8MHz	- - - x		- x -
+W65c02		10Mhz	- - - x		- x x
+W65c02		14MHz	- - - x		x - -
+
+R65c02		2Mhz	- - x -		- - -
+R65c02		4Mhz	- - x -		- - x
+R65c02		8MHz	- - x -		- x -
+R65c02		10Mhz	- - x -		- x x
+R65c02		14MHz	- - x -		x - -
+
+65x816		2Mhz	- - x x		- - -
+65x816		4Mhz	- - x x		- - x
+65x816		8MHz	- - x x		- x -
+65x816		10Mhz	- - x x		- x x
+65x816		14MHz	- - x x		x - -
+
+R6512		2Mhz	- x - -		- - -
+R6512		4Mhz	- x - -		- - x
+R6512		8MHz	- x - -		- x -
+R6512		10Mhz	- x - -		- x x
+R6512		14MHz	- x - -		x - -
+
+G65SC12		2Mhz	- x - x		- - -
+G65SC12		4Mhz	- x - x		- - x
+G65SC12		8MHz	- x - x		- x -
+G65SC12		10Mhz	- x - x		- x x
+G65SC12		14MHz	- x - x		x - -
+
+65c102		2Mhz	- x x -		- - -
+65c102		4Mhz	- x x -		- - x
+65c102		8MHz	- x x -		- x -
+65c102		10Mhz	- x x -		- x x
+65c102		14MHz	- x x -		x - -
+
+65c112		2Mhz	- x x x		- - -
+65c112		4Mhz	- x x x		- - x
+65c112		8MHz	- x x x		- x -
+65c112		10Mhz	- x x x		- x x
+65c112		14MHz	- x x x		x - -
+
+
+6809		2	x - - -		- - -
+6809		3.5	x - - -		- - x
+6309		2	x - - -		x - -
+6309		3.5	x - - -		x - x
+6309		4	x - - -		x x -
+
+
+z80		2	x - x -		- - -
+z80		4	x - x -		- - x
+z80		8	x - x -		- x -
+z80		10	x - x -		- x x
+z80		12	x - x -		x - -
+z80		16	x - x -		x - x
+z80		20	x - x -		x x -
+
+8088		?	x - x x		x - -
+8088		?	x - x x		x - x
+8088		?	x - x x		x x -
+8088		?	x - x x		x x x
+
+8086		?	x - x x		- - -
+8086		?	x - x x		- - x
+8086		?	x - x x		- x -
+8086		?	x - x x		- x x
+
+
+68008/48	8	x x - -		- - -
+68008/48	10	x x - -		- - x
+
+68008/52	8	x x - -		- x -
+68008/52	10	x x - -		- x x
+
+680x0		8	x x - -		x - -
+680x0		10	x x - -		x - x
+680x0		16	x x - -		x x -
+680x0		20	x x - -		x x x
+
+spare:			x - - x
+spare:			x x - x
+spare:			x x x -
+
+rpi 		model	x x x x		x - -
+rpi 		model	x x x x		x - x
+rpi 		model	x x x x		x x -
+rpi 		model	x x x x		x x x
+
+other		?	x x x x		- ? ?	 (8)
+
+
+
+# sys type config
+
+		sys_type
+		2 1 0
+Model B		- - -
+Elk		- - x
+Model B+	- x -
+Master 128	- x x
+
+
+# note 65816 ABORT is pin shared with phi1 - need a cmos output and jumper for 816, moved to 6x09 Q pin if req
+# note nSO, if required for 6502 will need a cmos output (for c02) and jumper
+# note BERR was tied to vcc on mk.2 give own pin shared with 6x09 Q on mk.3
+# is DBE/BE for 65xx needed, if not save a cmos output and add pull up
+# is VPA required for 68008 - if not get rid and add pull up (used for IRQ not sure about other stuff)
+
+TODO: check all pins against datasheets
+Z80: the rfsh line is not connected on mk.2 board in beeb but D7 is connected to D7 by bodge wire!?
+Z80: connect nRFSH to CPUSKT_VSS6VPA9BAKnAS_i (noted in mk2 vhdl) CHECK!
+z80: connect nHALT to CPUSKT_PHI16ABRT9BSKnDS_i? CHECK!
+
+All 68k - ignore E? (not used in mk.2 vhdl)
+68008_52 - connect IPL0/2 together as per 48 pin device?
+68008_52 - ignore bgack?
+680x0	 - ignore VMA?
+
+CHECK: is 8088 IOnM really inverse of 8086 MnIO
+
+POSS TIE two pins of PORTD for stronger clock?
+
+CHECK: PORTE/F/G overlap esp for A/D overlap in m68k cycles
+
+ADD PORTB for extra config pins (12 bits) and share with C/D - frees up more pins?
+

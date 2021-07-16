@@ -1,0 +1,980 @@
+EESchema Schematic File Version 4
+LIBS:blit-cpu-mk3-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 11
+Title "Mk.3 Blitter FPGA development board"
+Date "2021-05-08"
+Rev "3.00"
+Comp "Dossytronics"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	1650 1900 1550 1900
+Wire Wire Line
+	1550 1100 1650 1100
+Wire Wire Line
+	1650 1500 1450 1500
+Wire Wire Line
+	1450 1500 1450 2300
+Wire Wire Line
+	1450 3250 3000 3250
+Wire Wire Line
+	3050 1300 2850 1300
+Wire Wire Line
+	2850 1700 3050 1700
+Connection ~ 3050 1700
+Wire Wire Line
+	3050 1700 3050 1300
+Wire Wire Line
+	2850 2000 3050 2000
+Connection ~ 3050 2000
+Wire Wire Line
+	3050 2000 3050 1700
+Wire Wire Line
+	2850 2500 3050 2500
+Connection ~ 3050 2500
+Wire Wire Line
+	2850 2700 3050 2700
+Connection ~ 3050 2700
+Wire Wire Line
+	3050 2700 3050 2500
+Wire Wire Line
+	1650 2300 1450 2300
+Wire Wire Line
+	1650 3000 1450 3000
+Wire Wire Line
+	1450 3000 1450 3250
+Wire Wire Line
+	1650 1200 1050 1200
+Wire Wire Line
+	1650 1300 1050 1300
+Wire Wire Line
+	1650 1400 1050 1400
+Wire Wire Line
+	1650 1600 1050 1600
+Wire Wire Line
+	1650 1800 1050 1800
+Wire Wire Line
+	2850 1800 3450 1800
+Wire Wire Line
+	1650 2100 1050 2100
+Wire Wire Line
+	2850 2100 3450 2100
+Wire Wire Line
+	2850 2200 3450 2200
+Wire Wire Line
+	1650 2600 1050 2600
+Wire Wire Line
+	2850 2600 3450 2600
+Wire Wire Line
+	1650 2800 1050 2800
+Wire Wire Line
+	2850 2800 3450 2800
+Wire Wire Line
+	2850 3000 3050 3000
+Wire Wire Line
+	3450 2900 2850 2900
+Wire Wire Line
+	1050 1700 1650 1700
+Wire Wire Line
+	1050 2900 1650 2900
+Wire Wire Line
+	1050 2200 1650 2200
+Wire Wire Line
+	3450 2300 3050 2300
+Wire Wire Line
+	1050 2500 1650 2500
+Wire Wire Line
+	1050 2700 1650 2700
+Wire Wire Line
+	3450 1900 2850 1900
+Wire Wire Line
+	1050 2000 1650 2000
+Wire Wire Line
+	3450 1400 2850 1400
+Wire Wire Line
+	3450 1500 2850 1500
+Wire Wire Line
+	3450 1600 2850 1600
+Wire Wire Line
+	2850 1200 2950 1200
+Wire Wire Line
+	2950 1200 2950 1100
+Wire Wire Line
+	2850 1100 2950 1100
+Connection ~ 2950 1100
+Wire Wire Line
+	2950 1100 2950 950 
+Text Label 3450 1400 2    50   ~ 0
+5_exp_PORTC3
+Text Label 3450 1500 2    50   ~ 0
+5_exp_PORTC4
+Text Label 3450 1600 2    50   ~ 0
+5_exp_PORTC6
+Text Label 3450 1800 2    50   ~ 0
+5_exp_PORTC9
+Text Label 3450 1900 2    50   ~ 0
+5_exp_PORTC10
+Text Label 3450 2100 2    50   ~ 0
+5_exp_PORTD1
+Text Label 3450 2300 2    50   ~ 0
+5_exp_PORTD3
+Text Label 1050 2500 0    50   ~ 0
+5_exp_PORTD4
+Text Label 1050 2700 0    50   ~ 0
+5_exp_PORTD7
+Text Label 3450 2900 2    50   ~ 0
+5_exp_PORTD10
+Text Label 1050 1700 0    50   ~ 0
+5_exp_PORTE0
+Text Label 1050 2900 0    50   ~ 0
+5_exp_PORTE1
+Text Label 1050 1200 0    50   ~ 0
+5_exp_PORTC0
+Text Label 1050 1300 0    50   ~ 0
+5_exp_PORTC1
+Text Label 1050 1400 0    50   ~ 0
+5_exp_PORTC2
+Text Label 1050 1600 0    50   ~ 0
+5_exp_PORTC5
+Text Label 1050 1800 0    50   ~ 0
+5_exp_PORTC7
+Text Label 1050 2000 0    50   ~ 0
+5_exp_PORTC8
+Text Label 3450 2200 2    50   ~ 0
+5_exp_PORTC11
+Text Label 1050 2100 0    50   ~ 0
+5_exp_PORTD0
+Text Label 1050 2200 0    50   ~ 0
+5_exp_PORTD2
+Text Label 1050 2600 0    50   ~ 0
+5_exp_PORTD5
+Text Label 3450 2600 2    50   ~ 0
+5_exp_PORTD6
+Text Label 1050 2800 0    50   ~ 0
+5_exp_PORTD8
+Text Label 3450 2800 2    50   ~ 0
+5_exp_PORTD9
+Text Label 3450 3000 2    50   ~ 0
+5_exp_PORTD11
+Text HLabel 7600 650  0    50   BiDi ~ 0
+exp_PORTA[7..0]
+Text HLabel 7600 750  0    50   Input ~ 0
+exp_PORTA_DIR
+Text HLabel 7600 850  0    50   Input ~ 0
+exp_PORTA_nOE
+Text HLabel 7600 950  0    50   Input ~ 0
+exp_PORTB[7..0]
+Text HLabel 7600 1250 0    50   BiDi ~ 0
+exp_PORTC[11..0]
+Text HLabel 7600 1350 0    50   BiDi ~ 0
+exp_PORTD[11..0]
+Text HLabel 7600 1450 0    50   BiDi ~ 0
+exp_PORTEFG[11..0]
+$Sheet
+S 8500 600  1700 1850
+U 6062A0BF
+F0 "expansion_shifters" 50
+F1 "expansion_shifters.sch" 50
+F2 "exp_PORTA[7..0]" B L 8500 650 50 
+F3 "exp_PORTA_DIR" I L 8500 750 50 
+F4 "exp_PORTA_nOE" I L 8500 850 50 
+F5 "exp_PORTC[11..0]" B L 8500 1250 50 
+F6 "exp_PORTD[11..0]" B L 8500 1350 50 
+F7 "exp_PORTEFG[11..0]" B L 8500 1450 50 
+F8 "5C_exp_PORTA[7..0]" B R 10200 650 50 
+F9 "5C_exp_PORTB[7..0]" O R 10200 950 50 
+F10 "5_exp_PORTC[11..0]" B R 10200 1250 50 
+F11 "5_exp_PORTD[11..0]" B R 10200 1350 50 
+F12 "5_exp_PORTE[11..0]" B R 10200 1450 50 
+F13 "5_exp_PORTF[11..0]" B R 10200 1550 50 
+F14 "5_exp_PORTG[11..0]" B R 10200 1650 50 
+F15 "exp_PORTE_nOE" I L 8500 1550 50 
+F16 "exp_PORTF_nOE" I L 8500 1650 50 
+F17 "exp_PORTG_nOE" I L 8500 1750 50 
+F18 "exp_PORTB[7..0]" I L 8500 950 50 
+$EndSheet
+$Comp
+L power:GND #PWR0167
+U 1 1 6076191A
+P 3000 3250
+F 0 "#PWR0167" H 3000 3000 50  0001 C CNN
+F 1 "GND" H 3005 3077 50  0000 C CNN
+F 2 "" H 3000 3250 50  0001 C CNN
+F 3 "" H 3000 3250 50  0001 C CNN
+	1    3000 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 3000 3250
+Wire Wire Line
+	3000 3250 3050 3250
+NoConn ~ 1550 1900
+NoConn ~ 1550 1100
+Text HLabel 7600 1550 0    50   Input ~ 0
+exp_PORTE_nOE
+Text HLabel 7600 1650 0    50   Input ~ 0
+exp_PORTF_nOE
+Text HLabel 7600 1750 0    50   Input ~ 0
+exp_PORTG_nOE
+Text Label 10950 650  2    50   ~ 0
+5C_exp_PORTA[7..0]
+Wire Bus Line
+	10200 650  10950 650 
+Text Label 10950 950  2    50   ~ 0
+5C_exp_PORTB[7..0]
+Wire Bus Line
+	10200 950  10950 950 
+Text Label 10950 1250 2    50   ~ 0
+5_exp_PORTC[11..0]
+Wire Bus Line
+	10200 1250 10950 1250
+Text Label 10950 1350 2    50   ~ 0
+5_exp_PORTD[11..0]
+Wire Bus Line
+	10200 1350 10950 1350
+Text Label 10950 1450 2    50   ~ 0
+5_exp_PORTE[11..0]
+Wire Bus Line
+	10200 1450 10950 1450
+Text Label 10950 1550 2    50   ~ 0
+5_exp_PORTF[11..0]
+Wire Bus Line
+	10200 1550 10950 1550
+Text Label 10950 1650 2    50   ~ 0
+5_exp_PORTG[11..0]
+Wire Bus Line
+	10200 1650 10950 1650
+Wire Wire Line
+	3500 5100 2500 5100
+Wire Wire Line
+	3500 4800 2500 4800
+Wire Wire Line
+	3500 4900 2500 4900
+Wire Wire Line
+	3500 5000 2500 5000
+Wire Wire Line
+	7900 3850 8900 3850
+Wire Wire Line
+	7900 4050 8900 4050
+Wire Wire Line
+	1000 5600 2000 5600
+Wire Wire Line
+	2000 5100 1000 5100
+Wire Wire Line
+	2000 4800 1000 4800
+Wire Wire Line
+	2000 4900 1000 4900
+Wire Wire Line
+	2000 5000 1000 5000
+Wire Wire Line
+	8900 3950 7900 3950
+Wire Wire Line
+	4250 3650 5250 3650
+Wire Wire Line
+	1000 5400 2000 5400
+Wire Wire Line
+	1000 5500 2000 5500
+Wire Wire Line
+	4250 4050 5250 4050
+Wire Wire Line
+	4250 3950 5250 3950
+Wire Wire Line
+	3500 5200 2500 5200
+Wire Wire Line
+	5750 3650 6750 3650
+Wire Wire Line
+	2500 5400 3500 5400
+Wire Wire Line
+	2500 5500 3500 5500
+Wire Wire Line
+	5750 4050 6750 4050
+Wire Wire Line
+	5750 3950 6750 3950
+Wire Wire Line
+	2000 5300 1000 5300
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 60763B2F
+P 2950 850
+F 0 "#FLG0102" H 2950 925 50  0001 C CNN
+F 1 "PWR_FLAG" H 2950 1023 50  0000 C CNN
+F 2 "" H 2950 850 50  0001 C CNN
+F 3 "~" H 2950 850 50  0001 C CNN
+	1    2950 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0191
+U 1 1 60A72609
+P 1000 5100
+F 0 "#PWR0191" H 1000 4850 50  0001 C CNN
+F 1 "GND" H 1005 4927 50  0000 C CNN
+F 2 "" H 1000 5100 50  0001 C CNN
+F 3 "" H 1000 5100 50  0001 C CNN
+	1    1000 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0192
+U 1 1 60A72994
+P 3500 5100
+F 0 "#PWR0192" H 3500 4850 50  0001 C CNN
+F 1 "GND" H 3505 4927 50  0000 C CNN
+F 2 "" H 3500 5100 50  0001 C CNN
+F 3 "" H 3500 5100 50  0001 C CNN
+	1    3500 5100
+	0    -1   -1   0   
+$EndComp
+Text Label 3500 4800 2    50   ~ 0
+5_exp_PORTE2
+Text Label 3500 4900 2    50   ~ 0
+5_exp_PORTE4
+Text Label 3500 5000 2    50   ~ 0
+5_exp_PORTE6
+Text Label 3500 5300 2    50   ~ 0
+5_exp_PORTE10
+Text Label 1000 4800 0    50   ~ 0
+5_exp_PORTE3
+Text Label 1000 4900 0    50   ~ 0
+5_exp_PORTE5
+Text Label 1000 5000 0    50   ~ 0
+5_exp_PORTE7
+Text Label 1000 5200 0    50   ~ 0
+5_exp_PORTE9
+Text Label 1000 5300 0    50   ~ 0
+5_exp_PORTE11
+$Comp
+L power:+5V #PWR0195
+U 1 1 60A7550D
+P 4250 4350
+F 0 "#PWR0195" H 4250 4200 50  0001 C CNN
+F 1 "+5V" V 4265 4478 50  0000 L CNN
+F 2 "" H 4250 4350 50  0001 C CNN
+F 3 "" H 4250 4350 50  0001 C CNN
+	1    4250 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0196
+U 1 1 60A75513
+P 4250 3650
+F 0 "#PWR0196" H 4250 3400 50  0001 C CNN
+F 1 "GND" H 4255 3477 50  0000 C CNN
+F 2 "" H 4250 3650 50  0001 C CNN
+F 3 "" H 4250 3650 50  0001 C CNN
+	1    4250 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0199
+U 1 1 60A7D32E
+P 6750 4350
+F 0 "#PWR0199" H 6750 4200 50  0001 C CNN
+F 1 "+5V" V 6765 4478 50  0000 L CNN
+F 2 "" H 6750 4350 50  0001 C CNN
+F 3 "" H 6750 4350 50  0001 C CNN
+	1    6750 4350
+	0    1    1    0   
+$EndComp
+Text Label 1000 5500 0    50   ~ 0
+5_exp_PORTF0
+Text Label 3500 5500 2    50   ~ 0
+5_exp_PORTF2
+Text Label 4250 4050 0    50   ~ 0
+5_exp_PORTF4
+Text Label 4250 3950 0    50   ~ 0
+5_exp_PORTF6
+Text Label 1000 5400 0    50   ~ 0
+5_exp_PORTF1
+Text Label 3500 5400 2    50   ~ 0
+5_exp_PORTF3
+Text Label 6750 4050 2    50   ~ 0
+5_exp_PORTF5
+Text Label 6750 3950 2    50   ~ 0
+5_exp_PORTF7
+Wire Wire Line
+	4250 3850 5250 3850
+Wire Wire Line
+	6750 3850 5750 3850
+Wire Wire Line
+	7900 4650 8900 4650
+Wire Wire Line
+	3500 5600 2500 5600
+Wire Wire Line
+	1000 5700 2000 5700
+$Comp
+L power:GND #PWR0203
+U 1 1 60AE141C
+P 9650 4850
+F 0 "#PWR0203" H 9650 4600 50  0001 C CNN
+F 1 "GND" H 9655 4677 50  0000 C CNN
+F 2 "" H 9650 4850 50  0001 C CNN
+F 3 "" H 9650 4850 50  0001 C CNN
+	1    9650 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3850 9650 3850
+Wire Wire Line
+	9650 3850 9650 3950
+Wire Wire Line
+	9400 4350 9650 4350
+Connection ~ 9650 4350
+Wire Wire Line
+	9400 4250 9650 4250
+Connection ~ 9650 4250
+Wire Wire Line
+	9650 4250 9650 4350
+Wire Wire Line
+	9400 4150 9650 4150
+Connection ~ 9650 4150
+Wire Wire Line
+	9650 4150 9650 4250
+Wire Wire Line
+	9400 4050 9650 4050
+Connection ~ 9650 4050
+Wire Wire Line
+	9650 4050 9650 4150
+Wire Wire Line
+	9400 3950 9650 3950
+Connection ~ 9650 3950
+Wire Wire Line
+	9650 3950 9650 4050
+Text Label 4250 3850 0    50   ~ 0
+5_exp_PORTF8
+Text Label 6750 3850 2    50   ~ 0
+5_exp_PORTF9
+Text Label 7900 4650 0    50   ~ 0
+5_exp_PORTG8
+Text Label 3500 5600 2    50   ~ 0
+5_exp_PORTG9
+Text Label 3500 5700 2    50   ~ 0
+5_exp_PORTG10
+Text Label 1000 5700 0    50   ~ 0
+5_exp_PORTG11
+Wire Wire Line
+	1000 3800 2000 3800
+Wire Wire Line
+	1000 4000 2000 4000
+Wire Wire Line
+	1000 4200 2000 4200
+Wire Wire Line
+	3500 4100 2500 4100
+Text Label 1000 3800 0    50   ~ 0
+5C_exp_PORTA0
+Text Label 1000 4000 0    50   ~ 0
+5C_exp_PORTA2
+Text Label 1000 4200 0    50   ~ 0
+5C_exp_PORTA4
+Text Label 3500 4100 2    50   ~ 0
+5C_exp_PORTA6
+Wire Wire Line
+	2000 3900 1000 3900
+Wire Wire Line
+	2000 4100 1000 4100
+Wire Wire Line
+	2500 4000 3500 4000
+Wire Wire Line
+	2500 4200 3500 4200
+Text Label 1000 3900 0    50   ~ 0
+5C_exp_PORTA1
+Text Label 1000 4100 0    50   ~ 0
+5C_exp_PORTA3
+Text Label 3500 4000 2    50   ~ 0
+5C_exp_PORTA5
+Text Label 3500 4200 2    50   ~ 0
+5C_exp_PORTA7
+Wire Wire Line
+	2000 4400 1000 4400
+Wire Wire Line
+	2000 4600 1000 4600
+Wire Wire Line
+	2500 4400 3500 4400
+Wire Wire Line
+	2500 4600 3500 4600
+Text Label 1000 4400 0    50   ~ 0
+5C_exp_PORTB1
+Text Label 1000 4600 0    50   ~ 0
+5C_exp_PORTB3
+Text Label 3500 4400 2    50   ~ 0
+5C_exp_PORTB5
+Text Label 3500 4600 2    50   ~ 0
+5C_exp_PORTB7
+Wire Wire Line
+	1000 4300 2000 4300
+Wire Wire Line
+	1000 4500 2000 4500
+Wire Wire Line
+	3500 4300 2500 4300
+Wire Wire Line
+	3500 4500 2500 4500
+Text Label 1000 4300 0    50   ~ 0
+5C_exp_PORTB0
+Text Label 1000 4500 0    50   ~ 0
+5C_exp_PORTB2
+Text Label 3500 4300 2    50   ~ 0
+5C_exp_PORTB4
+Text Label 3500 4500 2    50   ~ 0
+5C_exp_PORTB6
+Wire Wire Line
+	7600 1550 8500 1550
+Wire Wire Line
+	7600 1650 8500 1650
+Wire Wire Line
+	7600 1750 8500 1750
+Text Label 7800 1550 0    50   ~ 0
+exp_PORTE_nOE
+Text Label 7800 1650 0    50   ~ 0
+exp_PORTF_nOE
+Text Label 7800 1750 0    50   ~ 0
+exp_PORTG_nOE
+Wire Bus Line
+	7600 1250 8500 1250
+Wire Bus Line
+	7600 1350 8500 1350
+Wire Bus Line
+	7600 1450 8500 1450
+Wire Bus Line
+	7600 950  8500 950 
+Wire Bus Line
+	7600 650  8500 650 
+Wire Wire Line
+	7600 750  8500 750 
+Wire Wire Line
+	7600 850  8500 850 
+Text Label 7800 750  0    50   ~ 0
+exp_PORTA_DIR
+Text Label 7800 850  0    50   ~ 0
+exp_PORTA_nOE
+Wire Wire Line
+	7900 4350 8900 4350
+Wire Wire Line
+	7900 4450 8900 4450
+Text Label 3500 3800 2    50   ~ 0
+exp_PORTA_nOE
+Text Label 4250 4150 0    50   ~ 0
+exp_PORTE_nOE
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J54
+U 1 1 61E1251F
+P 5450 3950
+F 0 "J54" H 5500 4467 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 5500 4376 50  0000 C CNN
+F 2 "mk3blit:PinHeader_2x08_P2.54mm_Vertical_SMD-dom" H 5450 3950 50  0001 C CNN
+F 3 "~" H 5450 3950 50  0001 C CNN
+	1    5450 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0187
+U 1 1 61E3ADBD
+P 6750 3650
+F 0 "#PWR0187" H 6750 3400 50  0001 C CNN
+F 1 "GND" H 6755 3477 50  0000 C CNN
+F 2 "" H 6750 3650 50  0001 C CNN
+F 3 "" H 6750 3650 50  0001 C CNN
+	1    6750 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1000 5200 2000 5200
+Wire Wire Line
+	3500 5300 2500 5300
+Wire Wire Line
+	5250 4350 4250 4350
+Wire Wire Line
+	6750 4350 5750 4350
+Wire Wire Line
+	3500 3900 2500 3900
+Wire Wire Line
+	3500 3800 2500 3800
+Wire Wire Line
+	4250 4150 5250 4150
+Wire Wire Line
+	4250 4250 5250 4250
+Text Label 7900 3950 0    50   ~ 0
+5_exp_PORTG1
+Text Label 7900 4150 0    50   ~ 0
+5_exp_PORTG3
+Text Label 7900 4250 0    50   ~ 0
+5_exp_PORTG4
+Text Label 7900 4350 0    50   ~ 0
+5_exp_PORTG5
+Text Label 7900 4450 0    50   ~ 0
+5_exp_PORTG6
+Text Label 4250 4250 0    50   ~ 0
+exp_PORTF_nOE
+Text Label 6750 4250 2    50   ~ 0
+exp_PORTG_nOE
+Wire Wire Line
+	5750 4150 6750 4150
+Wire Wire Line
+	6750 4250 5750 4250
+$Comp
+L power:+3V3 #PWR0200
+U 1 1 61F0F916
+P 6750 4150
+F 0 "#PWR0200" H 6750 4000 50  0001 C CNN
+F 1 "+3V3" V 6765 4278 50  0000 L CNN
+F 2 "" H 6750 4150 50  0001 C CNN
+F 3 "" H 6750 4150 50  0001 C CNN
+	1    6750 4150
+	0    1    1    0   
+$EndComp
+Text Label 7900 3850 0    50   ~ 0
+5_exp_PORTG0
+Text Label 7900 4050 0    50   ~ 0
+5_exp_PORTG2
+$Comp
+L power:+3V3 #PWR0194
+U 1 1 60A743E1
+P 1000 5600
+F 0 "#PWR0194" H 1000 5450 50  0001 C CNN
+F 1 "+3V3" V 1015 5728 50  0000 L CNN
+F 2 "" H 1000 5600 50  0001 C CNN
+F 3 "" H 1000 5600 50  0001 C CNN
+	1    1000 5600
+	0    -1   -1   0   
+$EndComp
+Text Label 3500 5200 2    50   ~ 0
+5_exp_PORTE8
+Wire Wire Line
+	4250 3750 5250 3750
+Wire Wire Line
+	6750 3750 5750 3750
+Wire Wire Line
+	7900 4550 8900 4550
+Text Label 4250 3750 0    50   ~ 0
+5_exp_PORTF10
+Text Label 6750 3750 2    50   ~ 0
+5_exp_PORTF11
+Text Label 7900 4550 0    50   ~ 0
+5_exp_PORTG7
+Wire Wire Line
+	9650 4350 9650 4450
+Wire Wire Line
+	9400 4450 9650 4450
+Connection ~ 9650 4450
+Wire Wire Line
+	9650 4450 9650 4550
+Wire Wire Line
+	9400 4550 9650 4550
+Connection ~ 9650 4550
+Wire Wire Line
+	9650 4550 9650 4650
+Wire Wire Line
+	2500 5700 3500 5700
+Wire Wire Line
+	9400 4650 9650 4650
+Connection ~ 9650 4650
+Wire Wire Line
+	9650 4650 9650 4850
+$Comp
+L Connector_Generic:Conn_02x09_Odd_Even J56
+U 1 1 6212A559
+P 9100 4250
+F 0 "J56" H 9150 4750 50  0000 C CNN
+F 1 "BOOT" H 9150 3750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x09_P2.54mm_Vertical" H 9100 4250 50  0001 C CNN
+F 3 "~" H 9100 4250 50  0001 C CNN
+	1    9100 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x20_Odd_Even J52
+U 1 1 622A8181
+P 2200 4700
+F 0 "J52" H 2250 5817 50  0000 C CNN
+F 1 "Conn_02x20_Odd_Even" H 2250 5726 50  0000 C CNN
+F 2 "mk3blit:PinHeader_2x20_P2.54mm_Vertical_SMD-dom" H 2200 4700 50  0001 C CNN
+F 3 "~" H 2200 4700 50  0001 C CNN
+	1    2200 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0188
+U 1 1 622D292B
+P 1000 4700
+F 0 "#PWR0188" H 1000 4550 50  0001 C CNN
+F 1 "+5V" V 1015 4828 50  0000 L CNN
+F 2 "" H 1000 4700 50  0001 C CNN
+F 3 "" H 1000 4700 50  0001 C CNN
+	1    1000 4700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 4700 3500 4700
+$Comp
+L power:+5V #PWR0189
+U 1 1 622DA5E5
+P 3500 4700
+F 0 "#PWR0189" H 3500 4550 50  0001 C CNN
+F 1 "+5V" V 3515 4828 50  0000 L CNN
+F 2 "" H 3500 4700 50  0001 C CNN
+F 3 "" H 3500 4700 50  0001 C CNN
+	1    3500 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1000 4700 2000 4700
+Wire Wire Line
+	8900 4250 7900 4250
+Wire Wire Line
+	8900 4150 7900 4150
+Wire Wire Line
+	3050 2300 2850 2300
+Wire Wire Line
+	3050 3000 3450 3000
+$Comp
+L Connector_Generic:Conn_01x02 J57
+U 1 1 609429F1
+P 4250 700
+F 0 "J57" H 4330 692 50  0000 L CNN
+F 1 "rpi power" H 4330 601 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4250 700 50  0001 C CNN
+F 3 "~" H 4250 700 50  0001 C CNN
+	1    4250 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 950  3200 950 
+Wire Wire Line
+	3200 950  3200 800 
+Wire Wire Line
+	3200 800  4050 800 
+Connection ~ 2950 950 
+Wire Wire Line
+	2950 950  2950 850 
+Wire Wire Line
+	4050 700  3600 700 
+$Comp
+L power:+5V #PWR0190
+U 1 1 60953D56
+P 3600 700
+F 0 "#PWR0190" H 3600 550 50  0001 C CNN
+F 1 "+5V" V 3615 828 50  0000 L CNN
+F 2 "" H 3600 700 50  0001 C CNN
+F 3 "" H 3600 700 50  0001 C CNN
+	1    3600 700 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3050 2700 3050 3250
+Wire Wire Line
+	1450 2300 1450 3000
+Connection ~ 1450 2300
+Connection ~ 1450 3000
+Wire Wire Line
+	3050 2000 3050 2500
+Text Label 3500 3900 2    50   ~ 0
+exp_PORTA_DIR
+Text Notes 4300 1000 2    50   ~ 0
+Add rpi serial header?
+Wire Wire Line
+	6800 5200 7800 5200
+Wire Wire Line
+	6800 5400 7800 5400
+Wire Wire Line
+	7800 5300 6800 5300
+Wire Wire Line
+	6800 6000 7800 6000
+Text Label 6800 6000 0    50   ~ 0
+5_exp_PORTG8
+Wire Wire Line
+	6800 5700 7800 5700
+Wire Wire Line
+	6800 5800 7800 5800
+Text Label 6800 5300 0    50   ~ 0
+5_exp_PORTG1
+Text Label 6800 5500 0    50   ~ 0
+5_exp_PORTG3
+Text Label 6800 5600 0    50   ~ 0
+5_exp_PORTG4
+Text Label 6800 5700 0    50   ~ 0
+5_exp_PORTG5
+Text Label 6800 5800 0    50   ~ 0
+5_exp_PORTG6
+Text Label 6800 5200 0    50   ~ 0
+5_exp_PORTG0
+Text Label 6800 5400 0    50   ~ 0
+5_exp_PORTG2
+Wire Wire Line
+	6800 5900 7800 5900
+Text Label 6800 5900 0    50   ~ 0
+5_exp_PORTG7
+Wire Wire Line
+	7800 5600 6800 5600
+Wire Wire Line
+	7800 5500 6800 5500
+$Comp
+L Device:R R50
+U 1 1 61711DB5
+P 7950 5200
+F 0 "R50" V 7900 4950 50  0000 C CNN
+F 1 "*NF" V 7950 5200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7880 5200 50  0001 C CNN
+F 3 "~" H 7950 5200 50  0001 C CNN
+	1    7950 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R51
+U 1 1 617335FC
+P 7950 5300
+F 0 "R51" V 7900 5050 50  0000 C CNN
+F 1 "*NF" V 7950 5300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7880 5300 50  0001 C CNN
+F 3 "~" H 7950 5300 50  0001 C CNN
+	1    7950 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R52
+U 1 1 61733859
+P 7950 5400
+F 0 "R52" V 7900 5150 50  0000 C CNN
+F 1 "*NF" V 7950 5400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7880 5400 50  0001 C CNN
+F 3 "~" H 7950 5400 50  0001 C CNN
+	1    7950 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R53
+U 1 1 617339CC
+P 7950 5500
+F 0 "R53" V 7900 5250 50  0000 C CNN
+F 1 "*NF" V 7950 5500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7880 5500 50  0001 C CNN
+F 3 "~" H 7950 5500 50  0001 C CNN
+	1    7950 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R54
+U 1 1 61733B92
+P 7950 5600
+F 0 "R54" V 7900 5350 50  0000 C CNN
+F 1 "*NF" V 7950 5600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7880 5600 50  0001 C CNN
+F 3 "~" H 7950 5600 50  0001 C CNN
+	1    7950 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R55
+U 1 1 61733CE6
+P 7950 5700
+F 0 "R55" V 7900 5450 50  0000 C CNN
+F 1 "*NF" V 7950 5700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7880 5700 50  0001 C CNN
+F 3 "~" H 7950 5700 50  0001 C CNN
+	1    7950 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R56
+U 1 1 61733E4E
+P 7950 5800
+F 0 "R56" V 7900 5550 50  0000 C CNN
+F 1 "*NF" V 7950 5800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7880 5800 50  0001 C CNN
+F 3 "~" H 7950 5800 50  0001 C CNN
+	1    7950 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R57
+U 1 1 61733F73
+P 7950 5900
+F 0 "R57" V 7900 5650 50  0000 C CNN
+F 1 "*NF" V 7950 5900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7880 5900 50  0001 C CNN
+F 3 "~" H 7950 5900 50  0001 C CNN
+	1    7950 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R58
+U 1 1 6173413A
+P 7950 6000
+F 0 "R58" V 7900 5750 50  0000 C CNN
+F 1 "*NF" V 7950 6000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7880 6000 50  0001 C CNN
+F 3 "~" H 7950 6000 50  0001 C CNN
+	1    7950 6000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8100 6000 8450 6000
+Wire Wire Line
+	8450 6000 8450 5900
+Wire Wire Line
+	8100 5200 8450 5200
+Connection ~ 8450 5200
+Wire Wire Line
+	8450 5200 8450 5000
+Wire Wire Line
+	8100 5300 8450 5300
+Connection ~ 8450 5300
+Wire Wire Line
+	8450 5300 8450 5200
+Wire Wire Line
+	8100 5400 8450 5400
+Connection ~ 8450 5400
+Wire Wire Line
+	8450 5400 8450 5300
+Wire Wire Line
+	8100 5500 8450 5500
+Connection ~ 8450 5500
+Wire Wire Line
+	8450 5500 8450 5400
+Wire Wire Line
+	8100 5600 8450 5600
+Connection ~ 8450 5600
+Wire Wire Line
+	8450 5600 8450 5500
+Wire Wire Line
+	8100 5700 8450 5700
+Connection ~ 8450 5700
+Wire Wire Line
+	8450 5700 8450 5600
+Wire Wire Line
+	8100 5800 8450 5800
+Connection ~ 8450 5800
+Wire Wire Line
+	8450 5800 8450 5700
+Wire Wire Line
+	8100 5900 8450 5900
+Connection ~ 8450 5900
+Wire Wire Line
+	8450 5900 8450 5800
+$Comp
+L power:+5V #PWR0201
+U 1 1 61790845
+P 8450 5000
+F 0 "#PWR0201" H 8450 4850 50  0001 C CNN
+F 1 "+5V" H 8465 5173 50  0000 C CNN
+F 2 "" H 8450 5000 50  0001 C CNN
+F 3 "" H 8450 5000 50  0001 C CNN
+	1    8450 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L rpi:rpi_gpio J51
+U 1 1 60A37B13
+P 2100 1750
+F 0 "J51" H 2250 2625 50  0000 C CNN
+F 1 "rpi_gpio" H 2250 2534 50  0000 C CNN
+F 2 "mk3blit:PinSocket_2x20_P2.54mm_Vertical_SMD-dom" H 2100 1750 50  0001 C CNN
+F 3 "" H 2100 1750 50  0001 C CNN
+	1    2100 1750
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

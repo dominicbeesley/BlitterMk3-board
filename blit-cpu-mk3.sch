@@ -1,0 +1,710 @@
+EESchema Schematic File Version 4
+LIBS:blit-cpu-mk3-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 11
+Title "Mk.3 Blitter FPGA development board"
+Date "2021-05-08"
+Rev "3.00"
+Comp "Dossytronics"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 600  600  900  1950
+U 604AA0DD
+F0 "sys_plug_and_buffers" 50
+F1 "sys_plug_and_buffers.sch" 50
+F2 "SYS_A[15..0]" I R 1500 650 50 
+F3 "SYS_D[7..0]" B R 1500 750 50 
+F4 "SYS_AUX_O[3..0]" I R 1500 2350 50 
+F5 "SYS_SYNC" I R 1500 850 50 
+F6 "SYS_RnW" I R 1500 950 50 
+F7 "SYS_PHI1" I R 1500 1050 50 
+F8 "SYS_PHI2" I R 1500 1150 50 
+F9 "SYS_BUFD_DIR" I R 1500 1250 50 
+F10 "SYS_BUFD_nOE" I R 1500 1350 50 
+F11 "SYS_RDY" O R 1500 1550 50 
+F12 "5_SYS_nRES" O R 1500 1650 50 
+F13 "SYS_nNMI" O R 1500 1750 50 
+F14 "SYS_nIRQ" O R 1500 1850 50 
+F15 "SYS_PHI0" O R 1500 1950 50 
+F16 "SYS_DBE" O R 1500 2050 50 
+F17 "SYS_AUX_IO[6..0]" O R 1500 2250 50 
+F18 "5_SYS_VCC_PWR" O R 1500 2150 50 
+$EndSheet
+Text Label 2250 650  2    50   ~ 0
+SYS_A[15..0]
+Text Label 2250 750  2    50   ~ 0
+SYS_D[7..0]
+Text Label 2250 850  2    50   ~ 0
+SYS_SYNC
+Text Label 2250 950  2    50   ~ 0
+SYS_RnW
+Text Label 2250 1050 2    50   ~ 0
+SYS_PHI1
+Text Label 2250 1150 2    50   ~ 0
+SYS_PHI2
+Text Label 2250 1250 2    50   ~ 0
+SYS_BUFD_DIR
+Text Label 2250 1350 2    50   ~ 0
+SYS_BUFD_nOE
+Text Label 2250 1650 2    50   ~ 0
+5_SYS_nRES
+Text Label 2250 1750 2    50   ~ 0
+SYS_nNMI
+Text Label 2250 1850 2    50   ~ 0
+SYS_nIRQ
+Text Label 2250 1950 2    50   ~ 0
+SYS_PHI0
+Text Label 2250 2050 2    50   ~ 0
+SYS_DBE
+Text Label 2250 2150 2    50   ~ 0
+5_SYS_VCC_PWR
+Text Label 2250 2250 2    50   ~ 0
+SYS_AUX_IO[6..0]
+Text Label 2250 2350 2    50   ~ 0
+SYS_AUX_O[3..0]
+Wire Wire Line
+	1500 850  2250 850 
+Wire Wire Line
+	1500 950  2250 950 
+Wire Wire Line
+	1500 1050 2250 1050
+Wire Wire Line
+	1500 1150 2250 1150
+Wire Wire Line
+	1500 1250 2250 1250
+Wire Wire Line
+	1500 1350 2250 1350
+Wire Wire Line
+	1500 1550 2250 1550
+Wire Wire Line
+	1500 1650 2250 1650
+Wire Wire Line
+	1500 1750 2250 1750
+Wire Wire Line
+	1500 1850 2250 1850
+Wire Wire Line
+	1500 1950 2250 1950
+Wire Wire Line
+	1500 2050 2250 2050
+Wire Wire Line
+	1500 2150 2250 2150
+Wire Bus Line
+	1500 2250 2250 2250
+Wire Bus Line
+	1500 2350 2250 2350
+Wire Bus Line
+	1500 650  2250 650 
+Wire Bus Line
+	1500 750  2250 750 
+$Sheet
+S 600  2750 900  1400
+U 6072DD3D
+F0 "memory" 50
+F1 "memory.sch" 50
+F2 "MEM_A[20..0]" I R 1500 2850 50 
+F3 "MEM_D[7..0]" T R 1500 2950 50 
+F4 "MEM_nOE" I R 1500 3050 50 
+F5 "MEM_nWE" I R 1500 3150 50 
+F6 "MEM_FL_nCE" I R 1500 3450 50 
+F7 "MEM_RAM_nCE[3..0]" I R 1500 3550 50 
+F8 "MEM_BB_nCE" I R 1500 3650 50 
+$EndSheet
+$Sheet
+S 9750 600  950  750 
+U 6072E224
+F0 "power" 50
+F1 "power.sch" 50
+F2 "5_SYS_VCC_PWR" I L 9750 650 50 
+F3 "5_SYS_nRES" I L 9750 750 50 
+F4 "SUP_nRES" O L 9750 950 50 
+F5 "MEM_BB_nCE_BB" O L 9750 1050 50 
+F6 "MEM_BB_nCE" I L 9750 1150 50 
+F7 "CLK_48M" O L 9750 1250 50 
+$EndSheet
+$Sheet
+S 600  6150 900  750 
+U 607433A4
+F0 "UI" 50
+F1 "UI.sch" 50
+F2 "LED[3..0]" I R 1500 6400 50 
+F3 "btnuser[1..0]" O R 1500 6800 50 
+$EndSheet
+Text Label 9000 650  0    50   ~ 0
+5_SYS_VCC_PWR
+Wire Wire Line
+	9750 650  9000 650 
+Wire Wire Line
+	9000 750  9750 750 
+Text Label 9000 750  0    50   ~ 0
+5_SYS_nRES
+Text Label 2250 2850 2    50   ~ 0
+MEM_A[20..0]
+Text Label 2250 2950 2    50   ~ 0
+MEM_D[7..0]
+Text Label 2250 3050 2    50   ~ 0
+MEM_nOE
+Text Label 2250 3150 2    50   ~ 0
+MEM_nWE
+Text Label 2250 3450 2    50   ~ 0
+MEM_FL_nCE
+Text Label 2250 3550 2    50   ~ 0
+MEM_RAM_nCE[3..0]
+Wire Wire Line
+	1500 3050 2250 3050
+Wire Wire Line
+	1500 3150 2250 3150
+Wire Wire Line
+	1500 3450 2250 3450
+Wire Bus Line
+	1500 2850 2250 2850
+Wire Bus Line
+	1500 2950 2250 2950
+$Sheet
+S 9750 1550 950  2050
+U 603C30FE
+F0 "soundvideo" 50
+F1 "soundvideo.sch" 50
+F2 "HDMI_SCL" I L 9750 2400 50 
+F3 "HDMI_SDA" B L 9750 2500 50 
+F4 "HDMI_HPD" O L 9750 2600 50 
+F5 "HDMI_D2P" I L 9750 2000 50 
+F6 "HDMI_D2N" I L 9750 2100 50 
+F7 "HDMI_D1P" I L 9750 1800 50 
+F8 "HDMI_D1N" I L 9750 1900 50 
+F9 "HDMI_D0P" I L 9750 1600 50 
+F10 "HDMI_D0N" I L 9750 1700 50 
+F11 "HDMI_CKP" I L 9750 2200 50 
+F12 "HDMI_CKN" I L 9750 2300 50 
+F13 "SND_L" I L 9750 2700 50 
+F14 "SND_R" I L 9750 2800 50 
+$EndSheet
+$Sheet
+S 9750 3950 950  800 
+U 6050C530
+F0 "extras" 50
+F1 "extras.sch" 50
+F2 "SD_CS" I L 9750 4000 50 
+F3 "SD_MOSI" I L 9750 4100 50 
+F4 "SD_CLK" I L 9750 4200 50 
+F5 "SD_MISO" O L 9750 4300 50 
+F6 "SD_DET" O L 9750 4400 50 
+F7 "I2C_SDA" B L 9750 4550 50 
+F8 "I2C_SCL" I L 9750 4650 50 
+$EndSheet
+Text Notes 700  1000 0    50   ~ 0
+1
+Text Notes 700  3100 0    50   ~ 0
+2
+Text Notes 10500 850  0    50   ~ 0
+9
+Text Notes 10450 1850 0    50   ~ 0
+3
+Text Notes 10550 4200 0    50   ~ 0
+4
+Text Notes 700  4750 0    50   ~ 0
+5
+$Sheet
+S 600  4500 900  1300
+U 6045FF62
+F0 "expansion_headers" 50
+F1 "expansion_headers.sch" 50
+F2 "exp_PORTA[7..0]" B R 1500 4600 50 
+F3 "exp_PORTA_DIR" I R 1500 4700 50 
+F4 "exp_PORTA_nOE" I R 1500 4800 50 
+F5 "exp_PORTB[7..0]" I R 1500 4900 50 
+F6 "exp_PORTC[11..0]" B R 1500 5200 50 
+F7 "exp_PORTD[11..0]" B R 1500 5300 50 
+F8 "exp_PORTEFG[11..0]" B R 1500 5400 50 
+F9 "exp_PORTE_nOE" I R 1500 5500 50 
+F10 "exp_PORTF_nOE" I R 1500 5600 50 
+F11 "exp_PORTG_nOE" I R 1500 5700 50 
+$EndSheet
+Text Label 2250 1550 2    50   ~ 0
+SYS_RDY
+$Sheet
+S 6700 650  900  1350
+U 607E3841
+F0 "fpga_power" 50
+F1 "fpga_power.sch" 50
+F2 "ALTERA_nSTATUS" O R 7600 800 50 
+F3 "ALTERA_nCONFIG" O R 7600 900 50 
+F4 "ALTERA_CONF_DONE" O R 7600 1000 50 
+F5 "ALTERA_CONFIG_SEL" O R 7600 1100 50 
+$EndSheet
+Text Label 9000 1050 0    50   ~ 0
+MEM_BB_nCE_BB
+Wire Wire Line
+	9750 1050 9000 1050
+Text Label 6300 650  2    50   ~ 0
+MEM_A[20..0]
+Wire Bus Line
+	5550 650  6300 650 
+Text Label 6300 1150 2    50   ~ 0
+MEM_FL_nCE
+Text Label 6300 1250 2    50   ~ 0
+MEM_RAM_nCE[3..0]
+Wire Wire Line
+	5550 1150 6300 1150
+Text Label 6300 850  2    50   ~ 0
+MEM_nOE
+Text Label 6300 950  2    50   ~ 0
+MEM_nWE
+Wire Wire Line
+	5550 850  6300 850 
+Wire Wire Line
+	5550 950  6300 950 
+Text Label 6300 750  2    50   ~ 0
+MEM_D[7..0]
+Wire Bus Line
+	5550 750  6300 750 
+Text Label 6300 1600 2    50   ~ 0
+SYS_A[15..0]
+Text Label 6300 1700 2    50   ~ 0
+SYS_D[7..0]
+Text Label 6300 1800 2    50   ~ 0
+SYS_SYNC
+Text Label 6300 1900 2    50   ~ 0
+SYS_RnW
+Text Label 6300 2000 2    50   ~ 0
+SYS_PHI1
+Text Label 6300 2100 2    50   ~ 0
+SYS_PHI2
+Text Label 6300 2200 2    50   ~ 0
+SYS_BUFD_DIR
+Text Label 6300 2300 2    50   ~ 0
+SYS_BUFD_nOE
+Wire Wire Line
+	5550 1800 6300 1800
+Wire Wire Line
+	5550 1900 6300 1900
+Wire Wire Line
+	5550 2000 6300 2000
+Wire Wire Line
+	5550 2100 6300 2100
+Wire Wire Line
+	5550 2200 6300 2200
+Wire Wire Line
+	5550 2300 6300 2300
+Wire Bus Line
+	5550 1600 6300 1600
+Wire Bus Line
+	5550 1700 6300 1700
+Text Label 6300 2500 2    50   ~ 0
+SYS_nNMI
+Text Label 6300 2800 2    50   ~ 0
+SYS_DBE
+Wire Wire Line
+	5550 2400 6300 2400
+Wire Wire Line
+	5550 2500 6300 2500
+Wire Wire Line
+	5550 2700 6300 2700
+Wire Wire Line
+	5550 2800 6300 2800
+Text Label 6300 2400 2    50   ~ 0
+SYS_RDY
+Text Label 6300 2900 2    50   ~ 0
+SYS_AUX_IO[6..0]
+Text Label 6300 3000 2    50   ~ 0
+SYS_AUX_O[3..0]
+Wire Bus Line
+	5550 2900 6300 2900
+Wire Bus Line
+	5550 3000 6300 3000
+Text Label 6500 3250 2    50   ~ 0
+exp_PORTA[7..0]
+Text Label 6500 3350 2    50   ~ 0
+exp_PORTA_DIR
+Text Label 6500 3450 2    50   ~ 0
+exp_PORTA_nOE
+Text Label 6500 3550 2    50   ~ 0
+exp_PORTB[7..0]
+Text Label 6500 3650 2    50   ~ 0
+exp_PORTC[11..0]
+Text Label 6500 3750 2    50   ~ 0
+exp_PORTD[11..0]
+Text Label 6500 3850 2    50   ~ 0
+exp_PORTEFG[11..0]
+Text Label 6500 3950 2    50   ~ 0
+exp_PORTE_nOE
+Text Label 6500 4050 2    50   ~ 0
+exp_PORTF_nOE
+Text Label 6500 4150 2    50   ~ 0
+exp_PORTG_nOE
+Wire Bus Line
+	6500 3250 5550 3250
+Wire Bus Line
+	6500 3550 5550 3550
+Wire Bus Line
+	6500 3650 5550 3650
+Wire Bus Line
+	6500 3750 5550 3750
+Wire Bus Line
+	6500 3850 5550 3850
+Wire Wire Line
+	6500 3350 5550 3350
+Wire Wire Line
+	6500 3450 5550 3450
+Wire Wire Line
+	6500 3950 5550 3950
+Wire Wire Line
+	6500 4050 5550 4050
+Wire Wire Line
+	6500 4150 5550 4150
+Text Label 2450 4600 2    50   ~ 0
+exp_PORTA[7..0]
+Text Label 2450 4700 2    50   ~ 0
+exp_PORTA_DIR
+Text Label 2450 4800 2    50   ~ 0
+exp_PORTA_nOE
+Text Label 2450 4900 2    50   ~ 0
+exp_PORTB[7..0]
+Text Label 2450 5200 2    50   ~ 0
+exp_PORTC[11..0]
+Text Label 2450 5300 2    50   ~ 0
+exp_PORTD[11..0]
+Text Label 2450 5400 2    50   ~ 0
+exp_PORTEFG[11..0]
+Text Label 2450 5500 2    50   ~ 0
+exp_PORTE_nOE
+Text Label 2450 5600 2    50   ~ 0
+exp_PORTF_nOE
+Text Label 2450 5700 2    50   ~ 0
+exp_PORTG_nOE
+Wire Bus Line
+	2450 4600 1500 4600
+Wire Bus Line
+	2450 4900 1500 4900
+Wire Bus Line
+	2450 5200 1500 5200
+Wire Bus Line
+	2450 5300 1500 5300
+Wire Bus Line
+	2450 5400 1500 5400
+Wire Wire Line
+	2450 4700 1500 4700
+Wire Wire Line
+	2450 4800 1500 4800
+Wire Wire Line
+	2450 5500 1500 5500
+Wire Wire Line
+	2450 5600 1500 5600
+Wire Wire Line
+	2450 5700 1500 5700
+$Sheet
+S 4000 600  1550 6950
+U 6077081F
+F0 "fpga_top" 50
+F1 "fpga_top.sch" 50
+F2 "MEM_A[20..0]" O R 5550 650 50 
+F3 "MEM_D_io[7..0]" B R 5550 750 50 
+F4 "MEM_nOE" O R 5550 850 50 
+F5 "MEM_nWE" O R 5550 950 50 
+F6 "MEM_FL_nCE" O R 5550 1150 50 
+F7 "MEM_RAM_nCE[3..0]" O R 5550 1250 50 
+F8 "SYS_A[15..0]" O R 5550 1600 50 
+F9 "SYS_D[7..0]" B R 5550 1700 50 
+F10 "SYS_AUX_O[3..0]" O R 5550 3000 50 
+F11 "SYS_SYNC" O R 5550 1800 50 
+F12 "SYS_RnW" O R 5550 1900 50 
+F13 "SYS_PHI1" O R 5550 2000 50 
+F14 "SYS_PHI2" O R 5550 2100 50 
+F15 "SYS_BUFD_DIR" O R 5550 2200 50 
+F16 "SYS_BUFD_nOE" O R 5550 2300 50 
+F17 "SYS_AUX_IO[6..0]" B R 5550 2900 50 
+F18 "SYS_RDY" I R 5550 2400 50 
+F19 "SYS_nNMI" I R 5550 2500 50 
+F20 "SYS_nIRQ" I R 5550 2600 50 
+F21 "SYS_PHI0" I R 5550 2700 50 
+F22 "SYS_DBE" I R 5550 2800 50 
+F23 "exp_PORTA[7..0]" B R 5550 3250 50 
+F24 "exp_PORTA_DIR" O R 5550 3350 50 
+F25 "exp_PORTA_nOE" O R 5550 3450 50 
+F26 "exp_PORTB[7..0]" O R 5550 3550 50 
+F27 "exp_PORTC[11..0]" B R 5550 3650 50 
+F28 "exp_PORTD[11..0]" B R 5550 3750 50 
+F29 "exp_PORTEFG[11..0]" B R 5550 3850 50 
+F30 "exp_PORTE_nOE" O R 5550 3950 50 
+F31 "exp_PORTF_nOE" O R 5550 4050 50 
+F32 "exp_PORTG_nOE" O R 5550 4150 50 
+F33 "HDMI_SCL" O R 5550 5100 50 
+F34 "HDMI_SDA" I R 5550 5200 50 
+F35 "HDMI_HPD" I R 5550 5300 50 
+F36 "HDMI_D2N" O R 5550 4800 50 
+F37 "HDMI_D1P" O R 5550 4500 50 
+F38 "HDMI_D1N" O R 5550 4600 50 
+F39 "HDMI_D0P" O R 5550 4300 50 
+F40 "HDMI_D0N" O R 5550 4400 50 
+F41 "HDMI_CKP" O R 5550 4900 50 
+F42 "HDMI_CKN" O R 5550 5000 50 
+F43 "HDMI_D2P" O R 5550 4700 50 
+F44 "SND_L" I R 5550 5450 50 
+F45 "SND_R" I R 5550 5550 50 
+F46 "SD_CS" O R 5550 5700 50 
+F47 "SD_MOSI" O R 5550 5800 50 
+F48 "SD_CLK" O R 5550 5900 50 
+F49 "SD_MISO" I R 5550 6000 50 
+F50 "SD_DET" I R 5550 6100 50 
+F51 "I2C_SCL" O R 5550 6250 50 
+F52 "I2C_SDA" B R 5550 6350 50 
+F53 "LED[3..0]" O R 5550 6500 50 
+F54 "SUP_nRES" I R 5550 6650 50 
+F55 "CLK_48M" I R 5550 6950 50 
+F56 "btnuser[1..0]" I R 5550 7450 50 
+F57 "ALTERA_nSTATUS" I R 5550 7050 50 
+F58 "ALTERA_nCONFIG" I R 5550 7150 50 
+F59 "ALTERA_CONF_DONE" I R 5550 7250 50 
+F60 "ALTERA_CONFIG_SEL" I R 5550 7350 50 
+$EndSheet
+Wire Wire Line
+	5550 2600 6300 2600
+Text Label 6300 2700 2    50   ~ 0
+SYS_PHI0
+Text Label 6300 2600 2    50   ~ 0
+SYS_nIRQ
+Text Label 6300 4300 2    50   ~ 0
+HDMI_D0P
+Text Label 6300 4400 2    50   ~ 0
+HDMI_D0N
+Text Label 6300 4500 2    50   ~ 0
+HDMI_D1P
+Text Label 6300 4600 2    50   ~ 0
+HDMI_D1N
+Text Label 6300 4700 2    50   ~ 0
+HDMI_D2P
+Text Label 6300 4800 2    50   ~ 0
+HDMI_D2N
+Wire Wire Line
+	5550 4300 6300 4300
+Wire Wire Line
+	5550 4400 6300 4400
+Wire Wire Line
+	5550 4500 6300 4500
+Wire Wire Line
+	5550 4600 6300 4600
+Wire Wire Line
+	5550 4700 6300 4700
+Wire Wire Line
+	5550 4800 6300 4800
+Text Label 6300 5000 2    50   ~ 0
+HDMI_CKN
+Text Label 6300 5300 2    50   ~ 0
+HDMI_HPD
+Wire Wire Line
+	5550 4900 6300 4900
+Wire Wire Line
+	5550 5000 6300 5000
+Wire Wire Line
+	5550 5200 6300 5200
+Wire Wire Line
+	5550 5300 6300 5300
+Text Label 6300 4900 2    50   ~ 0
+HDMI_CKP
+Wire Wire Line
+	5550 5100 6300 5100
+Text Label 6300 5200 2    50   ~ 0
+HDMI_SDA
+Text Label 6300 5100 2    50   ~ 0
+HDMI_SCL
+Text Label 9000 1600 0    50   ~ 0
+HDMI_D0P
+Text Label 9000 1700 0    50   ~ 0
+HDMI_D0N
+Text Label 9000 1800 0    50   ~ 0
+HDMI_D1P
+Text Label 9000 1900 0    50   ~ 0
+HDMI_D1N
+Text Label 9000 2000 0    50   ~ 0
+HDMI_D2P
+Text Label 9000 2100 0    50   ~ 0
+HDMI_D2N
+Wire Wire Line
+	9750 1600 9000 1600
+Wire Wire Line
+	9750 1700 9000 1700
+Wire Wire Line
+	9750 1800 9000 1800
+Wire Wire Line
+	9750 1900 9000 1900
+Wire Wire Line
+	9750 2000 9000 2000
+Wire Wire Line
+	9750 2100 9000 2100
+Text Label 9000 2300 0    50   ~ 0
+HDMI_CKN
+Text Label 9000 2600 0    50   ~ 0
+HDMI_HPD
+Wire Wire Line
+	9750 2200 9000 2200
+Wire Wire Line
+	9750 2300 9000 2300
+Wire Wire Line
+	9750 2500 9000 2500
+Wire Wire Line
+	9750 2600 9000 2600
+Text Label 9000 2200 0    50   ~ 0
+HDMI_CKP
+Wire Wire Line
+	9750 2400 9000 2400
+Text Label 9000 2500 0    50   ~ 0
+HDMI_SDA
+Text Label 9000 2400 0    50   ~ 0
+HDMI_SCL
+Wire Wire Line
+	9750 2700 9000 2700
+Wire Wire Line
+	9750 2800 9000 2800
+Text Label 9000 2700 0    50   ~ 0
+SND_L
+Text Label 9000 2800 0    50   ~ 0
+SND_R
+Wire Wire Line
+	5550 5450 6300 5450
+Wire Wire Line
+	5550 5550 6300 5550
+Text Label 6300 5450 2    50   ~ 0
+SND_L
+Text Label 6300 5550 2    50   ~ 0
+SND_R
+Wire Wire Line
+	9750 1150 9000 1150
+Wire Wire Line
+	9750 4100 9000 4100
+Wire Wire Line
+	9750 4000 9000 4000
+Wire Wire Line
+	9750 4300 9000 4300
+Wire Wire Line
+	9750 4400 9000 4400
+Wire Wire Line
+	9750 4200 9000 4200
+Text Label 9000 4000 0    50   ~ 0
+SD_CS
+Text Label 9000 4100 0    50   ~ 0
+SD_MOSI
+Text Label 9000 4200 0    50   ~ 0
+SD_CLK
+Text Label 9000 4300 0    50   ~ 0
+SD_MISO
+Text Label 9000 4400 0    50   ~ 0
+SD_DET
+Wire Wire Line
+	5550 5800 6300 5800
+Wire Wire Line
+	5550 5700 6300 5700
+Wire Wire Line
+	5550 6000 6300 6000
+Wire Wire Line
+	5550 6100 6300 6100
+Wire Wire Line
+	5550 5900 6300 5900
+Text Label 6300 5700 2    50   ~ 0
+SD_CS
+Text Label 6300 5800 2    50   ~ 0
+SD_MOSI
+Text Label 6300 5900 2    50   ~ 0
+SD_CLK
+Text Label 6300 6000 2    50   ~ 0
+SD_MISO
+Text Label 6300 6100 2    50   ~ 0
+SD_DET
+Wire Wire Line
+	6300 6250 5550 6250
+Wire Wire Line
+	5550 6350 6300 6350
+Wire Wire Line
+	6300 6650 5550 6650
+Wire Bus Line
+	6300 6500 5550 6500
+Text Label 6300 6250 2    50   ~ 0
+I2C_SCL
+Text Label 6300 6350 2    50   ~ 0
+I2C_SDA
+Text Label 6300 6500 2    50   ~ 0
+LED[3..0]
+Text Label 6300 6650 2    50   ~ 0
+SUP_nRES
+Wire Wire Line
+	9000 950  9750 950 
+Text Label 9000 950  0    50   ~ 0
+SUP_nRES
+Wire Wire Line
+	9000 4650 9750 4650
+Wire Wire Line
+	9750 4550 9000 4550
+Text Label 9000 4650 0    50   ~ 0
+I2C_SCL
+Text Label 9000 4550 0    50   ~ 0
+I2C_SDA
+Text Notes 750  6250 0    50   ~ 0
+6
+Wire Bus Line
+	2250 6400 1500 6400
+Text Label 2250 6400 2    50   ~ 0
+LED[3..0]
+Wire Wire Line
+	6300 6950 5550 6950
+Text Label 6300 6950 2    50   ~ 0
+CLK_48M
+Wire Wire Line
+	9000 1250 9750 1250
+Text Label 9000 1250 0    50   ~ 0
+CLK_48M
+Wire Bus Line
+	2250 6800 1500 6800
+Text Label 2250 6800 2    50   ~ 0
+btnuser[1..0]
+Wire Bus Line
+	6300 7450 5550 7450
+Text Label 6300 7450 2    50   ~ 0
+btnuser[1..0]
+Wire Bus Line
+	2250 3550 1500 3550
+Wire Bus Line
+	6300 1250 5550 1250
+Text Label 9000 1150 0    50   ~ 0
+MEM_RAM_nCE0
+Text Label 2250 3650 2    50   ~ 0
+MEM_BB_nCE_BB
+Wire Wire Line
+	1500 3650 2250 3650
+Wire Wire Line
+	6300 7050 5550 7050
+Wire Wire Line
+	6300 7150 5550 7150
+Wire Wire Line
+	6300 7250 5550 7250
+Wire Wire Line
+	6300 7350 5550 7350
+Text Label 6300 7050 2    50   ~ 0
+ALTERA_nSTATUS
+Text Label 6300 7150 2    50   ~ 0
+ALTERA_nCONFIG
+Text Label 6300 7250 2    50   ~ 0
+ALTERA_CONF_DONE
+Text Label 6300 7350 2    50   ~ 0
+ALTERA_CONFIG_SEL
+Wire Wire Line
+	8350 800  7600 800 
+Wire Wire Line
+	8350 900  7600 900 
+Wire Wire Line
+	8350 1000 7600 1000
+Wire Wire Line
+	8350 1100 7600 1100
+Text Label 8350 800  2    50   ~ 0
+ALTERA_nSTATUS
+Text Label 8350 900  2    50   ~ 0
+ALTERA_nCONFIG
+Text Label 8350 1000 2    50   ~ 0
+ALTERA_CONF_DONE
+Text Label 8350 1100 2    50   ~ 0
+ALTERA_CONFIG_SEL
+$EndSCHEMATC

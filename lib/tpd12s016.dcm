@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP tpd12s016
+D HDMI level shifter and ESP protection
+F https://www.ti.com/store/ti/en/p/product/?p=TPD12S016PWR&utm_source=google&utm_medium=cpc&utm_campaign=app-null-null-OPN_EN-cpc-store-google-eu&utm_content=Device&ds_k=TPD12S016PWR&DCM=yes&gclid=CjwKCAiAm-2BBhANEiwAe7eyFOpeQBBZWNcOmW3BwU6nKV_Puu4HEBdbl_lYfEI_q68nD38eRWSK_RoCUWAQAvD_BwE&gclsrc=aw.ds
+$ENDCMP
+#
+#End Doc Library
