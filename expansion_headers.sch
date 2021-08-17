@@ -6,10 +6,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 8 11
 Title "Mk.3 Blitter FPGA development board"
-Date "2021-05-08"
-Rev "3.00"
+Date "2021-08-14"
+Rev "3.03"
 Comp "Dossytronics"
-Comment1 ""
+Comment1 "fixed: clk/sysd0, jtag, u22 footprint"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -774,8 +774,6 @@ Wire Wire Line
 	3050 2000 3050 2500
 Text Label 3500 3900 2    50   ~ 0
 exp_PORTA_DIR
-Text Notes 4300 1000 2    50   ~ 0
-Add rpi serial header?
 Wire Wire Line
 	6800 5200 7800 5200
 Wire Wire Line

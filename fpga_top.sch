@@ -6,10 +6,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 11 11
 Title "Mk.3 Blitter FPGA development board"
-Date "2021-05-08"
-Rev "3.00"
+Date "2021-08-14"
+Rev "3.03"
 Comp "Dossytronics"
-Comment1 ""
+Comment1 "fixed: clk/sysd0, jtag, u22 footprint"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -462,6 +462,30 @@ BTNUSER_i_[1..0]
 Wire Bus Line
 	9100 1350 9900 1350
 Wire Wire Line
+	7800 4150 7000 4150
+Text Label 7000 4150 0    50   ~ 0
+~ALTERA_nSTATUS~
+Wire Wire Line
+	7800 4250 7000 4250
+Text Label 7000 4250 0    50   ~ 0
+~ALTERA_nCONFIG~
+Wire Wire Line
+	7800 4350 7000 4350
+Text Label 7000 4350 0    50   ~ 0
+~ALTERA_CONF_DONE~
+Wire Wire Line
+	7800 4450 7000 4450
+Text Label 7000 4450 0    50   ~ 0
+~ALTERA_CONFIG_SEL~
+Text HLabel 7800 4150 2    50   Input ~ 0
+ALTERA_nSTATUS
+Text HLabel 7800 4250 2    50   Input ~ 0
+ALTERA_nCONFIG
+Text HLabel 7800 4350 2    50   Input ~ 0
+ALTERA_CONF_DONE
+Text HLabel 7800 4450 2    50   Input ~ 0
+ALTERA_CONFIG_SEL
+Wire Wire Line
 	5900 5750 6700 5750
 Text Label 6700 5750 2    50   ~ 0
 exp_PORTA_DIR_o
@@ -580,59 +604,59 @@ SYS_D_io_1
 Wire Wire Line
 	3800 2300 4600 2300
 Text Label 4600 2300 2    50   ~ 0
-SYS_D_io_0
+SYS_BUF_D_nOE_o
 Wire Wire Line
 	3800 2400 4600 2400
 Text Label 4600 2400 2    50   ~ 0
-SYS_BUF_D_nOE_o
+SYS_BUF_D_DIR_o
 Wire Wire Line
 	3800 2500 4600 2500
 Text Label 4600 2500 2    50   ~ 0
-SYS_BUF_D_DIR_o
+SYS_A_o_9
 Wire Wire Line
 	3800 2600 4600 2600
 Text Label 4600 2600 2    50   ~ 0
-SYS_A_o_9
+SYS_A_o_8
 Wire Wire Line
 	3800 2700 4600 2700
 Text Label 4600 2700 2    50   ~ 0
-SYS_A_o_8
+SYS_A_o_7
 Wire Wire Line
 	3800 2800 4600 2800
 Text Label 4600 2800 2    50   ~ 0
-SYS_A_o_7
+SYS_A_o_6
 Wire Wire Line
 	3800 2900 4600 2900
 Text Label 4600 2900 2    50   ~ 0
-SYS_A_o_6
+SYS_A_o_15
 Wire Wire Line
 	3800 3000 4600 3000
 Text Label 4600 3000 2    50   ~ 0
-SYS_A_o_15
+SYS_A_o_11
 Wire Wire Line
 	3800 3100 4600 3100
 Text Label 4600 3100 2    50   ~ 0
-SYS_A_o_11
+SYS_A_o_10
 Wire Wire Line
 	3800 3200 4600 3200
 Text Label 4600 3200 2    50   ~ 0
-SYS_A_o_10
+LED_o_3
 Wire Wire Line
 	3800 3300 4600 3300
 Text Label 4600 3300 2    50   ~ 0
-LED_o_3
+LED_o_2
 Wire Wire Line
 	3800 3400 4600 3400
 Text Label 4600 3400 2    50   ~ 0
-LED_o_2
+LED_o_1
 Wire Wire Line
 	3800 3500 4600 3500
 Text Label 4600 3500 2    50   ~ 0
-LED_o_1
+LED_o_0
 Wire Wire Line
 	3800 3600 4600 3600
 Text Label 4600 3600 2    50   ~ 0
-LED_o_0
+CLK_48M_i
 Wire Wire Line
 	3800 3700 4600 3700
 Text Label 4600 3700 2    50   ~ 0
@@ -848,66 +872,66 @@ exp_PORTC_io_0
 Wire Wire Line
 	3800 5900 4600 5900
 Text Label 4600 5900 2    50   ~ 0
-SUP_nRESET_i
+SYS_D_io_0
 Wire Wire Line
 	3800 6000 4600 6000
 Text Label 4600 6000 2    50   ~ 0
-SND_R_o
+SUP_nRESET_i
 Wire Wire Line
 	3800 6100 4600 6100
 Text Label 4600 6100 2    50   ~ 0
-SND_L_o
+SND_R_o
 Wire Wire Line
 	3800 6200 4600 6200
 Text Label 4600 6200 2    50   ~ 0
-SD_MOSI_o
+SND_L_o
 Wire Wire Line
 	3800 6300 4600 6300
 Text Label 4600 6300 2    50   ~ 0
-SD_CS_o
+SD_MOSI_o
 Wire Wire Line
 	3800 6400 4600 6400
 Text Label 4600 6400 2    50   ~ 0
-SD_CLK_o
+SD_CS_o
 Wire Wire Line
 	3800 6500 4600 6500
-NoConn ~ 4600 6500
+Text Label 4600 6500 2    50   ~ 0
+SD_CLK_o
 Wire Wire Line
 	3800 6600 4600 6600
-Text Label 4600 6600 2    50   ~ 0
-MEM_RAM_nCE_o_3
+NoConn ~ 4600 6600
 Wire Wire Line
 	3800 6700 4600 6700
 Text Label 4600 6700 2    50   ~ 0
-MEM_RAM_nCE_o_2
+MEM_RAM_nCE_o_3
 Wire Wire Line
 	3800 6800 4600 6800
 Text Label 4600 6800 2    50   ~ 0
-MEM_A_o_20
+MEM_RAM_nCE_o_2
 Wire Wire Line
 	3800 6900 4600 6900
 Text Label 4600 6900 2    50   ~ 0
-MEM_A_o_19
+MEM_A_o_20
 Wire Wire Line
 	3800 7000 4600 7000
 Text Label 4600 7000 2    50   ~ 0
-MEM_A_o_15
+MEM_A_o_19
 Wire Wire Line
 	3800 7100 4600 7100
 Text Label 4600 7100 2    50   ~ 0
-MEM_A_o_12
+MEM_A_o_15
 Wire Wire Line
 	3800 7200 4600 7200
 Text Label 4600 7200 2    50   ~ 0
-I2C_SDA_io
+MEM_A_o_12
 Wire Wire Line
 	3800 7300 4600 7300
 Text Label 4600 7300 2    50   ~ 0
-I2C_SCL_o
+I2C_SDA_io
 Wire Wire Line
 	3800 7400 4600 7400
 Text Label 4600 7400 2    50   ~ 0
-CLK_48M_i
+I2C_SCL_o
 Wire Wire Line
 	1750 6450 2550 6450
 Text Label 2550 6450 2    50   ~ 0
@@ -1154,28 +1178,4 @@ Wire Wire Line
 	8050 1450 8850 1450
 Text Label 8850 1450 2    50   ~ 0
 MEM_A_o_14
-Wire Wire Line
-	7800 4150 7000 4150
-Text Label 7000 4150 0    50   ~ 0
-~ALTERA_nSTATUS~
-Wire Wire Line
-	7800 4250 7000 4250
-Text Label 7000 4250 0    50   ~ 0
-~ALTERA_nCONFIG~
-Wire Wire Line
-	7800 4350 7000 4350
-Text Label 7000 4350 0    50   ~ 0
-~ALTERA_CONF_DONE~
-Wire Wire Line
-	7800 4450 7000 4450
-Text Label 7000 4450 0    50   ~ 0
-~ALTERA_CONFIG_SEL~
-Text HLabel 7800 4150 2    50   Input ~ 0
-ALTERA_nSTATUS
-Text HLabel 7800 4250 2    50   Input ~ 0
-ALTERA_nCONFIG
-Text HLabel 7800 4350 2    50   Input ~ 0
-ALTERA_CONF_DONE
-Text HLabel 7800 4450 2    50   Input ~ 0
-ALTERA_CONFIG_SEL
 $EndSCHEMATC

@@ -32,10 +32,10 @@ J52	cmos	io	PORTA[7]	CPUSKT_D_io[7]				D[7]	26	D[7]	26	D[7]	24	D[7]	20	D[7]	13	D
 J52	cmos	o	PORTB[0]	CPUSKT_6BE9TSCKnVPA_o			BE	36	BE	6	TSC	39	nVPA	39			nVPA	43	nVPA	21	nVPA	23	MNnMX		33	MNnMX		33
 J52	cmos	o	PORTB[1]	CPUSKT_9Q_o			*	[nSO]1	38	[ABRT]2 3	Q	35	?BERR?	40			?BERR?	44	?nBERR? 22	?nBERR?	24	
 J52	cmos	o	PORTB[2]	CPUSKT_PHI09EKZCLK_o			phi0	37	phi0	37	E	34	CLK	34			CLK	38	CLK	15	CLK	15	CLK		19	CLK		19
-J52	cmos	o	PORTB[3]	CPUSKT_RDY9KnHALTZnWAIT_o		RDY	2	RDY	2	HALT	40	HALT	36	nWAIT	24	nHALT	40	nHALT	17	nHALT	19	READY		22	READY		22
+J52	cmos	o	PORTB[3]	CPUSKT_RDY9KnHALTZnWAIT_o		RDY	2	RDY	2	HALT	40			nWAIT	24	?nBGACK?36	?nBGACK?12	?nBGACK?12	READY		22	READY		22
 J52	cmos	o	PORTB[4]	CPUSKT_nIRQKnIPL1_o			nIRQ	4	nIRQ	4	nIRQ	3	IPL1	41	nIRQ	16	IPL1	45	IPL1	24	IPL1	26	INTR		18	INTR		18
 J52	cmos	o	PORTB[5]	CPUSKT_nNMIKnIPL02_o			nNMI	6	nNMI	6	nNMI	2	IPL0/2	42	nNMI	17	IPL0	47	IPL0	25	IPL0	27	NMI		17	NMI		17
-J52	cmos	o	PORTB[6]	CPUSKT_nRES_o				nRES	40	nRES	40	nRES	37	nRES	37	nRES	26	nRES	41	nRES	18	nRES	20	RESET		21	RESET		21
+J52	cmos	o	PORTB[6]	CPUSKT_nRES_o				nRES	40	nRES	40	nRES	37			nRES	26	?IPL2?	46	?IPL2?	23	?IPL2?	25	RESET		21	RESET		21
 			PORTB[7]	CPUSKT_9nFIRQLnDTACK_o							nFIRQ	4	nDTACK	31			nDTACK	34	nDTACK	10	nDTACK	10
 
 	### TTL I/O ###
@@ -62,10 +62,12 @@ J51		i	PORTD[5]	CPUSKT_VSS6VPA9BAKnAS_i			[vss]3	1	[VPB]3	1	BA	6	nAS	28	?nRFSH?	
 J51		i	PORTD[6]	CPUSKT_nSO6MX9AVMAKFC1ZnIOREQ_i	*	phi1	3	[M/X]1	38	AVMA	36	FC1	44	nIOREQ	20	FC1	49	FC1	27	FC1	29	IOnM	nS0	28	MnIO	nS0	28
 J51		io	PORTD[7]	CPUSKT_C6nML9BUSYKnBGZnBUSACK_i 	MLB	5	MLB	5	BUSY	33	nBG	32	nBUSACK	23	nBG	35	nBG	11	nBG	11	HLDA	RQGT0	30	HLDA	RQGT0	
 J51		io	PORTD[8]	CPUSKT_KnBRZnBUSREQ_o									nBR	33	nBUSREQ	25	nBR	37	nBR	13	nBR	13	HOLD	RQGT1	31	HOLD	RQGT1	31
-J51		o	PORTD[9]										
-J51		o	PORTD[10]																?IPL2?	46	?IPL2?	23	?IPL2?	25	?nTEST?		23	?nTEST?		23
-J51		i	PORTD[11]																?nBGACK?36	?nBGACK?12	?nBGACK?12
-																						?nVMA?	19	?nVMA?	21
+J51		o	PORTD[9]												nRES	37			nRES	41	nRES	18	nRES	20	?nTEST?		23	?nTEST?		23
+J51		o	PORTD[10]												HALT	36			nHALT	40	nHALT	17	nHALT	19				
+J51		i	PORTD[11]																		?nVMA?	19	?nVMA?	21
+																						
+
+
 
 1 nSO/MX is selected via jumper
 2 ABORT/PHI1 is selected via jumper
@@ -87,10 +89,10 @@ J54		i	PORTE[10]																		A[22]	51	A[22]	54
 J54		i	PORTE[11]																		A[23]	52	A[23]	55
 
 
-J54		io	PORTF[0]																		D[8]	61	D[8]	65	A[8]		8	AD[8]		8
-J54		io	PORTF[1]																		D[9]	60	D[9]	64	A[9]		7	AD[9]		7
-J54		io	PORTF[2]																		D[10]	59	D[10]	63	A[10]		6	AD[10]		6
-J54		io	PORTF[3]																		D[11]	58	D[11]	62	A[11]		5	AD[11]		5
+J54		io	PORTF[4]																		D[8]	61	D[8]	65	A[8]		8	AD[8]		8
+J54		io	PORTF[5]																		D[9]	60	D[9]	64	A[9]		7	AD[9]		7
+J54		io	PORTF[6]																		D[10]	59	D[10]	63	A[10]		6	AD[10]		6
+J54		io	PORTF[7]																		D[11]	58	D[11]	62	A[11]		5	AD[11]		5
 J54		io	PORTF[8]																		D[12]	57	D[12]	61	A[12]		4	AD[12]		4
 J54		io	PORTF[9]																		D[13]	56	D[13]	60	A[13]		3	AD[13]		3
 J54		io	PORTF[10]																		D[14]	55	D[14]	59	A[14]		2	AD[14]		2
@@ -115,10 +117,10 @@ sys_type[2]	PORTG[2]
 
 # cpu board configuration
 
-cpu_type[0]	PORTF[4]
-cpu_type[1]	PORTF[5]
-cpu_type[2]	PORTF[6]
-cpu_type[3]	PORTF[7]
+cpu_type[0]	PORTF[0]
+cpu_type[1]	PORTF[1]
+cpu_type[2]	PORTF[2]
+cpu_type[3]	PORTF[3]
 
 cpu_speed[0]	PORTG[9]
 cpu_speed[1]	PORTG[10]
@@ -132,6 +134,7 @@ cpu_speed[2]	PORTG[11]
 
 #cpu config
 			cpu_type	speed
+			D C B A		C B A
 			3 2 1 0 	2 1 0
 6502A		2MHz	- - - -		- - -
 

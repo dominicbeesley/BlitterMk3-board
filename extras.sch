@@ -6,10 +6,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 11
 Title "Mk.3 Blitter FPGA development board"
-Date "2021-05-08"
-Rev "3.00"
+Date "2021-08-14"
+Rev "3.03"
 Comp "Dossytronics"
-Comment1 ""
+Comment1 "fixed: clk/sysd0, jtag, u22 footprint"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -473,10 +473,6 @@ F 3 "" H 10550 2900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10550 3050 10550 2900
-Text Notes 3050 3350 0    50   ~ 0
-FIND BETTER RTC+EEPROM?\n
-Text Notes 3050 3550 0    50   ~ 0
-LOOK AT I2C ROM on *.
 Wire Wire Line
 	1050 4000 1550 4000
 $Comp

@@ -6,4 +6,10 @@ K SRAM
 F http://www.issi.com/WW/pdf/61-64C5128AL.pdf
 $ENDCMP
 #
+$CMP generic_2048x8_TSOP_II_44_BB
+D Generic CMOS STATIC RAM, 10ns, TSOP II-44
+K SRAM
+F http://www.issi.com/WW/pdf/61-64C5128AL.pdf
+$ENDCMP
+#
 #End Doc Library

@@ -6,10 +6,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 11
 Title "Mk.3 Blitter FPGA development board"
-Date "2021-05-08"
-Rev "3.00"
+Date "2021-08-14"
+Rev "3.03"
 Comp "Dossytronics"
-Comment1 ""
+Comment1 "fixed: clk/sysd0, jtag, u22 footprint"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -428,8 +428,6 @@ F 3 "" H 3450 6750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3450 6750 3450 6700
-Text Notes 5350 6600 2    50   ~ 0
-Consider (poly)fuse?\nConsider 1way PMOS for gpio power\nAdd jumper for gpio power
 $Comp
 L Connector_Generic:Conn_01x04 J92
 U 1 1 6076E596
@@ -657,7 +655,7 @@ Wire Wire Line
 Wire Wire Line
 	7900 1200 8750 1200
 Wire Wire Line
-	1750 1550 2100 1550
+	1750 1550 1800 1550
 Text HLabel 1150 3900 0    50   Input ~ 0
 5_SYS_nRES
 Wire Wire Line
@@ -820,8 +818,6 @@ Wire Wire Line
 Connection ~ 3350 1750
 Wire Wire Line
 	3350 1750 3450 1750
-Text Notes 4550 6950 0    50   ~ 0
-add power indicator
 $Comp
 L Device:CP C92
 U 1 1 607567CC
@@ -951,4 +947,29 @@ Connection ~ 7900 1650
 Wire Wire Line
 	9950 1300 9950 1200
 Connection ~ 9950 1200
+$Comp
+L Device:Jumper_NO_Small LK90
+U 1 1 61239010
+P 2100 1000
+F 0 "LK90" H 2100 1185 50  0000 C CNN
+F 1 "NF" H 2100 1094 50  0000 C CNN
+F 2 "mk3blit:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm-domsmallctyd" H 2100 1000 50  0001 C CNN
+F 3 "~" H 2100 1000 50  0001 C CNN
+	1    2100 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1000 3350 1000
+Wire Wire Line
+	3350 1000 3350 1350
+Connection ~ 3350 1350
+Wire Wire Line
+	2000 1000 1800 1000
+Wire Wire Line
+	1800 1000 1800 1550
+Connection ~ 1800 1550
+Wire Wire Line
+	1800 1550 2100 1550
+Text Notes 2250 850  0    50   ~ 0
+solder bridge if no stm795
 $EndSCHEMATC

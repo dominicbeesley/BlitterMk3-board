@@ -6,10 +6,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 11
 Title "Mk.3 Blitter FPGA development board"
-Date "2021-05-08"
-Rev "3.00"
+Date "2021-08-14"
+Rev "3.03"
 Comp "Dossytronics"
-Comment1 ""
+Comment1 "fixed: clk/sysd0, jtag, u22 footprint"
 Comment2 ""
 Comment3 ""
 Comment4 ""

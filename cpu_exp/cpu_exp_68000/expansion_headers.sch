@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:cpu_exp_65xx_6x09-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 2 3
 Title "mk.3 Blitter 65xx/6x09 cpu expander"
 Date "2021-05-10"
 Rev "3.01"
@@ -54,8 +53,6 @@ Wire Wire Line
 	1650 1600 1050 1600
 Wire Wire Line
 	1650 1800 1050 1800
-Wire Wire Line
-	1650 2100 1050 2100
 Wire Wire Line
 	2850 2100 3450 2100
 Wire Wire Line
@@ -163,7 +160,7 @@ Text Label 7600 1450 0    50   ~ 0
 Wire Bus Line
 	8350 1450 7600 1450
 Text Label 7600 1550 0    50   ~ 0
-5_exp_PORTF[3..0]
+5_exp_PORTF[11..0]
 Wire Bus Line
 	8350 1550 7600 1550
 Wire Wire Line
@@ -174,8 +171,6 @@ Wire Wire Line
 	4300 4900 3300 4900
 Wire Wire Line
 	4300 5000 3300 5000
-Wire Wire Line
-	1000 5600 2000 5600
 Wire Wire Line
 	2000 5100 1000 5100
 Wire Wire Line
@@ -308,17 +303,6 @@ Text Label 4300 4300 2    50   ~ 0
 5C_exp_PORTB4
 Text Label 4300 4500 2    50   ~ 0
 5C_exp_PORTB6
-$Comp
-L power:+3V3 #PWR0109
-U 1 1 60A743E1
-P 1000 5600
-F 0 "#PWR0109" H 1000 5450 50  0001 C CNN
-F 1 "+3V3" V 1015 5728 50  0000 L CNN
-F 2 "" H 1000 5600 50  0001 C CNN
-F 3 "" H 1000 5600 50  0001 C CNN
-	1    1000 5600
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	3300 5700 4300 5700
 $Comp
@@ -373,7 +357,7 @@ Wire Wire Line
 Wire Wire Line
 	2950 850  2950 1100
 Text HLabel 7600 1550 0    50   BiDi ~ 0
-exp_PORTF[3..0]
+exp_PORTF[11..0]
 $Comp
 L rpi:rpi_gpio_plug P5
 U 1 1 609E7ECF
@@ -385,6 +369,17 @@ F 3 "" H 2100 1750 50  0001 C CNN
 	1    2100 1750
 	1    0    0    -1  
 $EndComp
+$Comp
+L mk3blit_J52_plug:MK3J52PLUG P6
+U 1 1 60A1223F
+P 2700 4700
+F 0 "P6" H 2650 5825 50  0000 C CNN
+F 1 "MK3J52PLUG" H 2650 5734 50  0000 C CNN
+F 2 "mk3blit:PinSocket_2x20_P2.54mm_Vertical_SMD-dom" H 2700 4700 50  0001 C CNN
+F 3 "" H 2700 4700 50  0001 C CNN
+	1    2700 4700
+	1    0    0    -1  
+$EndComp
 NoConn ~ 3300 3800
 NoConn ~ 3300 3900
 Text Label 7600 1650 0    50   ~ 0
@@ -393,31 +388,158 @@ Wire Bus Line
 	8350 1650 7600 1650
 Text HLabel 7600 1650 0    50   BiDi ~ 0
 exp_PORTG[11..9]
-NoConn ~ 1650 2000
-NoConn ~ 2850 1900
-NoConn ~ 2850 1800
 Text Label 3450 2300 2    50   ~ 0
 5_exp_PORTD3
-NoConn ~ 2850 2200
-NoConn ~ 1650 2800
-NoConn ~ 2850 2900
-NoConn ~ 2850 2800
-NoConn ~ 2850 3000
-NoConn ~ 3300 5300
-NoConn ~ 3300 5200
-NoConn ~ 2000 5300
-NoConn ~ 2000 5200
 Text Label 2000 3250 2    50   ~ 0
 GND
+Wire Wire Line
+	1650 2100 1050 2100
+Wire Wire Line
+	1650 2000 1050 2000
+Text Label 1050 2000 0    50   ~ 0
+5_exp_PORTC8
+Wire Wire Line
+	1650 2800 1050 2800
+Text Label 1050 2800 0    50   ~ 0
+5_exp_PORTD8
+Wire Wire Line
+	3450 1800 2850 1800
+Text Label 3450 1800 2    50   ~ 0
+5_exp_PORTC9
+Wire Wire Line
+	3450 1900 2850 1900
+Text Label 3450 1900 2    50   ~ 0
+5_exp_PORTC10
+Wire Wire Line
+	3450 2200 2850 2200
+Text Label 3450 2200 2    50   ~ 0
+5_exp_PORTC11
+Wire Wire Line
+	2850 2800 3450 2800
+Text Label 3450 2800 2    50   ~ 0
+5_exp_PORTD9
+Text Label 3450 3000 2    50   ~ 0
+5_exp_PORTD11
+Wire Wire Line
+	3450 2900 2850 2900
+Text Label 3450 2900 2    50   ~ 0
+5_exp_PORTD10
+Wire Wire Line
+	3450 3000 2850 3000
+Wire Wire Line
+	1000 5200 2000 5200
+Text Label 1000 5300 0    50   ~ 0
+5_exp_PORTE11
+Text Label 1000 5200 0    50   ~ 0
+5_exp_PORTE9
+Wire Wire Line
+	1000 5300 2000 5300
+Wire Wire Line
+	3300 5200 4300 5200
+Wire Wire Line
+	3300 5300 4300 5300
+Text Label 4300 5300 2    50   ~ 0
+5_exp_PORTE10
+Text Label 4300 5200 2    50   ~ 0
+5_exp_PORTE8
 $Comp
-L mk3blit_J52_plug:MK3J52PLUG P6
-U 1 1 611A113B
-P 2700 4700
-F 0 "P6" H 2650 5825 50  0000 C CNN
-F 1 "MK3J52PLUG" H 2650 5734 50  0000 C CNN
-F 2 "" H 2700 4700 50  0001 C CNN
-F 3 "" H 2700 4700 50  0001 C CNN
-	1    2700 4700
+L mk3blit_J52_plug:mk3J54socket P7
+U 1 1 611DBD4F
+P 7100 4300
+F 0 "P7" H 7100 4975 50  0000 C CNN
+F 1 "mk3J54socket" H 7100 4884 50  0000 C CNN
+F 2 "mk3blit:PinSocket_2x08_P2.54mm_Vertical_SMD-dom" H 7100 4300 50  0001 C CNN
+F 3 "" H 7100 4300 50  0001 C CNN
+	1    7100 4300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6400 3850 5400 3850
+Wire Wire Line
+	5400 4150 6400 4150
+Wire Wire Line
+	5400 4250 6400 4250
+$Comp
+L power:GND #PWR0104
+U 1 1 611DCA0C
+P 5400 3850
+F 0 "#PWR0104" H 5400 3600 50  0001 C CNN
+F 1 "GND" H 5405 3677 50  0000 C CNN
+F 2 "" H 5400 3850 50  0001 C CNN
+F 3 "" H 5400 3850 50  0001 C CNN
+	1    5400 3850
+	0    1    1    0   
+$EndComp
+Text Label 5400 4250 0    50   ~ 0
+5_exp_PORTF4
+Text Label 5400 4150 0    50   ~ 0
+5_exp_PORTF6
+Wire Wire Line
+	5400 3950 6400 3950
+Text Label 5400 4050 0    50   ~ 0
+5_exp_PORTF8
+Text Label 5400 3950 0    50   ~ 0
+5_exp_PORTF10
+Wire Wire Line
+	5400 4050 6400 4050
+NoConn ~ 6400 4350
+NoConn ~ 6400 4450
+$Comp
+L power:+5V #PWR0113
+U 1 1 611E76D7
+P 5400 4550
+F 0 "#PWR0113" H 5400 4400 50  0001 C CNN
+F 1 "+5V" V 5415 4678 50  0000 L CNN
+F 2 "" H 5400 4550 50  0001 C CNN
+F 3 "" H 5400 4550 50  0001 C CNN
+	1    5400 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5400 4550 6400 4550
+Wire Wire Line
+	7800 4550 8800 4550
+$Comp
+L power:+5V #PWR0117
+U 1 1 611EB396
+P 8800 4550
+F 0 "#PWR0117" H 8800 4400 50  0001 C CNN
+F 1 "+5V" V 8815 4678 50  0000 L CNN
+F 2 "" H 8800 4550 50  0001 C CNN
+F 3 "" H 8800 4550 50  0001 C CNN
+	1    8800 4550
+	0    1    1    0   
+$EndComp
+NoConn ~ 7800 4450
+Wire Wire Line
+	7800 3850 8800 3850
+Wire Wire Line
+	8800 4150 7800 4150
+Wire Wire Line
+	8800 4250 7800 4250
+$Comp
+L power:GND #PWR0123
+U 1 1 611FB04B
+P 8800 3850
+F 0 "#PWR0123" H 8800 3600 50  0001 C CNN
+F 1 "GND" H 8805 3677 50  0000 C CNN
+F 2 "" H 8800 3850 50  0001 C CNN
+F 3 "" H 8800 3850 50  0001 C CNN
+	1    8800 3850
+	0    -1   1    0   
+$EndComp
+Text Label 8800 4250 2    50   ~ 0
+5_exp_PORTF5
+Text Label 8800 4150 2    50   ~ 0
+5_exp_PORTF7
+Wire Wire Line
+	8800 3950 7800 3950
+Text Label 8800 4050 2    50   ~ 0
+5_exp_PORTF9
+Text Label 8800 3950 2    50   ~ 0
+5_exp_PORTF11
+Wire Wire Line
+	8800 4050 7800 4050
+NoConn ~ 7800 4350
+NoConn ~ 2000 5600
 $EndSCHEMATC

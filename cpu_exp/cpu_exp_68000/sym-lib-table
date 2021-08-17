@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name cpu_pins_left)(type Legacy)(uri ${KIPRJMOD}/../../lib/cpu_pins_left_1_20.lib)(options "")(descr ""))
+  (lib (name cpu_pins_right)(type Legacy)(uri ${KIPRJMOD}/../../lib/cpu_pins_right40_21.lib)(options "")(descr ""))
+  (lib (name vcc_cpu)(type Legacy)(uri ${KIPRJMOD}/../../lib/vcc_cpu.lib)(options "")(descr ""))
+  (lib (name rpi)(type Legacy)(uri ${KIPRJMOD}/../../lib/rpi.lib)(options "")(descr ""))
+  (lib (name mk3blit_J52_plug)(type Legacy)(uri ${KIPRJMOD}/../../lib/mk3blit_J52_plug.lib)(options "")(descr ""))
+)

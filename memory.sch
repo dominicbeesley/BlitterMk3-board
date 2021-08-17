@@ -6,16 +6,14 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 11
 Title "Mk.3 Blitter FPGA development board"
-Date "2021-05-08"
-Rev "3.00"
+Date "2021-08-14"
+Rev "3.03"
 Comp "Dossytronics"
-Comment1 ""
+Comment1 "fixed: clk/sysd0, jtag, u22 footprint"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 950  800  0    50   ~ 0
-8 bit Flash to ease programming\nfrom an 8 bit CPU\nAdd pull ups on CE, WE (and other?) signals to avoid false writes during boot
 $Comp
 L sst39:sst39x040 U21
 U 1 1 6036EAD6
@@ -146,37 +144,37 @@ Text Label 6800 6000 2    50   ~ 0
 MEM_D6
 Text Label 6800 6100 2    50   ~ 0
 MEM_D7
-Text Label 600  2150 0    50   ~ 0
+Text Label 600  3150 0    50   ~ 0
 MEM_A1
-Text Label 600  2050 0    50   ~ 0
+Text Label 600  3250 0    50   ~ 0
 MEM_A2
-Text Label 600  1950 0    50   ~ 0
+Text Label 600  3350 0    50   ~ 0
 MEM_A3
-Text Label 600  2450 0    50   ~ 0
-MEM_A4
-Text Label 600  2550 0    50   ~ 0
-MEM_A5
-Text Label 600  2650 0    50   ~ 0
-MEM_A6
 Text Label 600  2750 0    50   ~ 0
+MEM_A4
+Text Label 600  2650 0    50   ~ 0
+MEM_A5
+Text Label 600  2550 0    50   ~ 0
+MEM_A6
+Text Label 600  2450 0    50   ~ 0
 MEM_A7
 Text Label 600  1650 0    50   ~ 0
 MEM_A8
-Text Label 600  1750 0    50   ~ 0
-MEM_A9
-Text Label 600  2350 0    50   ~ 0
-MEM_A10
-Text Label 600  1850 0    50   ~ 0
-MEM_A11
-Text Label 600  2850 0    50   ~ 0
-MEM_A12
 Text Label 600  1550 0    50   ~ 0
-MEM_A13
-Text Label 600  1450 0    50   ~ 0
-MEM_A14
+MEM_A9
 Text Label 600  2950 0    50   ~ 0
+MEM_A10
+Text Label 600  1450 0    50   ~ 0
+MEM_A11
+Text Label 600  2350 0    50   ~ 0
+MEM_A12
+Text Label 600  1750 0    50   ~ 0
+MEM_A13
+Text Label 600  1850 0    50   ~ 0
+MEM_A14
+Text Label 600  2250 0    50   ~ 0
 MEM_A17
-Text Label 600  3250 0    50   ~ 0
+Text Label 600  1950 0    50   ~ 0
 MEM_A18
 Wire Wire Line
 	600  2550 1200 2550
@@ -438,27 +436,10 @@ Wire Wire Line
 	2400 1950 3000 1950
 Wire Wire Line
 	600  3350 1200 3350
-Wire Wire Line
-	600  3450 1200 3450
-Text Label 600  3350 0    50   ~ 0
+Text Label 600  2850 0    50   ~ 0
 MEM_A19
-Text Label 600  3450 0    50   ~ 0
-MEM_A20
-Text Label 600  2250 0    50   ~ 0
+Text Label 600  3050 0    50   ~ 0
 MEM_A0
-Text Notes 1550 7100 0    50   ~ 0
-ADD memory configure links\nADD memory power config links for BB/fast
-$Comp
-L memory:generic_2048x8_TSOP_II_44 U22
-U 1 1 60D1BD24
-P 1800 2550
-F 0 "U22" H 1800 2600 50  0000 C CNN
-F 1 "generic_2048x8_TSOP_II_44" H 1050 3850 50  0000 C CNN
-F 2 "Package_SO:TSOP-II-44_10.16x18.41mm_P0.8mm" H 750 3900 50  0001 C CNN
-F 3 "http://www.issi.com/WW/pdf/61-64C5128AL.pdf" H 1800 2550 50  0001 C CNN
-	1    1800 2550
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0138
 U 1 1 60D8885B
@@ -615,9 +596,9 @@ Wire Wire Line
 	600  3050 1200 3050
 Wire Wire Line
 	600  2950 1200 2950
-Text Label 600  3150 0    50   ~ 0
+Text Label 600  2050 0    50   ~ 0
 MEM_A16
-Text Label 600  3050 0    50   ~ 0
+Text Label 600  2150 0    50   ~ 0
 MEM_A15
 Text Label 3200 2150 0    50   ~ 0
 MEM_A1
@@ -1019,7 +1000,7 @@ Wire Wire Line
 	10600 5550 10600 5650
 Wire Wire Line
 	9750 5650 10600 5650
-Text Label 600  3650 0    50   ~ 0
+Text Label 600  3550 0    50   ~ 0
 MEM_BB_nCE
 Text Label 2050 6250 2    50   ~ 0
 MEM_BB_nCE
@@ -1027,4 +1008,19 @@ Wire Wire Line
 	2050 6250 1450 6250
 Text HLabel 1450 6250 0    50   Input ~ 0
 MEM_BB_nCE
+$Comp
+L memory:generic_2048x8_TSOP_II_44_BB U22
+U 1 1 61191FA2
+P 1800 2550
+F 0 "U22" H 1800 2600 50  0000 C CNN
+F 1 "generic_2048x8_TSOP_II_44_BB" H 1100 3800 50  0000 C CNN
+F 2 "Package_SO:TSOP-II-44_10.16x18.41mm_P0.8mm" H 750 3900 50  0001 C CNN
+F 3 "http://www.issi.com/WW/pdf/61-64C5128AL.pdf" H 1800 2550 50  0001 C CNN
+	1    1800 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3550 600  3550
+Text Label 600  3650 0    50   ~ 0
+RAM0PWR
 $EndSCHEMATC

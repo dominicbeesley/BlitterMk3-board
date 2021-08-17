@@ -6,10 +6,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 10 11
 Title "Mk.3 Blitter FPGA development board"
-Date "2021-05-08"
-Rev "3.00"
+Date "2021-08-14"
+Rev "3.03"
 Comp "Dossytronics"
-Comment1 ""
+Comment1 "fixed: clk/sysd0, jtag, u22 footprint"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -41,11 +41,11 @@ F 3 "" H 2050 5100 60  0001 C CNN
 	7    2050 5100
 	1    0    0    -1  
 $EndComp
-Text Label 3400 5200 2    50   ~ 0
+Text Label 3400 5400 2    50   ~ 0
 ~ALTERA_TDI~
 Text Label 3400 5300 2    50   ~ 0
 ~ALTERA_TDO~
-Text Label 3400 5400 2    50   ~ 0
+Text Label 3400 5200 2    50   ~ 0
 ~ALTERA_TMS~
 Text Label 3400 5500 2    50   ~ 0
 ~ALTERA_TCK~
@@ -1243,6 +1243,4 @@ Wire Wire Line
 Connection ~ 6500 5900
 Wire Wire Line
 	6500 5900 6750 5900
-Text Notes 3150 5000 0    50   ~ 0
-ERROR, TDI/TMS transposed
 $EndSCHEMATC
