@@ -820,4 +820,6 @@ F 3 "~" H 10050 1800 50  0001 C CNN
 	1    10050 1800
 	1    0    0    -1  
 $EndComp
+Text Notes 2450 3050 0    50   ~ 0
+TODO: pull up resistors on RESET, HALT\nRotate pin labels to be rotationally symetrical
 $EndSCHEMATC
