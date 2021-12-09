@@ -821,5 +821,5 @@ F 3 "~" H 10050 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 2450 3050 0    50   ~ 0
-TODO: pull up resistors on RESET, HALT\nRotate pin labels to be rotationally symetrical
+TODO: pull up resistors on RESET, HALT\nRotate pin labels to be rotationally symetrical\nC1 - 0805 footprint\nAdd corner cut to avoid power connector\nSlightly fouls sound connectors, move sound connectors ?
 $EndSCHEMATC
